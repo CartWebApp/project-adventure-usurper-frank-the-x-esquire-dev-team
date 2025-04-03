@@ -1,12 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Risk and Ruin</title>
     <link rel="stylesheet" href="style.css">
+
 </head>
+
 <body>
-    
+    <div class="dialog" id="active">
+        <div class="dialogCharacter" id=""><img id="speaking" src="/images/characters/goblin.png" alt="">
+            <div class="npc" id="idle" alt=""></div>
+        </div>
+        <section class="textBox" onclick="typeWriter()">
+            <p id="demo"></p>
+        </section>
+    </div>
+    <!-- option selector -->
+    <div class="option">
+        <button type="submit" value="submit" class="option1">1</button>
+        <button type="submit" value="submit" class="option2">2</button>
+        <button type="reset" value="reset" class="option3">3</button>
+    </div>
+    <div class="skillCheck" id="overlay">
+        <p>skill</p>
+    </div>
+
+
 </body>
+<script src="main.js"></script>
+
 </html>

@@ -1,0 +1,159 @@
+ :root {
+     --white: #ffff;
+     --black: #000;
+
+ }
+
+ html {
+     height: 100%;
+ }
+
+ body {
+     margin: 0;
+     height: 100%;
+     background-image: url(images/environment/casinobg.jpg);
+     background-size: cover;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+ }
+
+ .dialog {
+     width: 50%;
+ }
+
+ .textBox {
+     align-self: center;
+     background-color: dimgray;
+     border: solid 3px black;
+     width: 100%;
+     height: 200px;
+     padding: 10px;
+     border-radius: 10px;
+ }
+
+ .textBox p {
+     color: #ffff;
+ }
+
+ .dialog .dialogCharacter {
+     display: flex;
+     justify-content: space-between;
+     position: relative;
+     top: 150px;
+     z-index: -1;
+ }
+
+ .dialog .dialogCharacter img {
+     width: 20rem;
+ }
+
+ button {
+     border: none;
+     font-size: 16px;
+     margin-top: 10px;
+     height: 2rem;
+     border-top-left-radius: 15rem;
+     border-bottom-left-radius: 15rem;
+     transition-duration: 0.4s;
+     cursor: pointer;
+ }
+
+
+ /* option selector class */
+ .option {
+     display: flex;
+     flex-direction: column;
+     align-self: flex-end;
+ }
+
+ .option1 {
+     align-self: flex-end;
+     width: 13rem;
+     background-color: gray;
+     color: black;
+ }
+
+ .option1:hover {
+     width: 15rem;
+     background-color: gray;
+     border: 1px solid black;
+ }
+
+ .option2 {
+     align-self: flex-end;
+     width: 13rem;
+     background-color: gray;
+     color: black;
+ }
+
+ .option2:hover {
+     width: 15rem;
+     border: 1px solid black;
+ }
+
+ .option3 {
+     align-self: flex-end;
+     width: 13rem;
+     background-color: gray;
+     color: black;
+ }
+
+ .option3:hover {
+     width: 15rem;
+     border: 1px solid black;
+ }
+
+ .npc {
+     background: url(images/characters/goblin2.png);
+     background-repeat: no-repeat;
+     background-position: center;
+     background-size: cover;
+     height: 320px;
+     width: 20rem;
+ }
+
+ .history {
+     display: flex;
+     align-self: flex-start;
+     justify-items: flex-start;
+ }
+
+ #idle {
+     filter: brightness(40%);
+ }
+
+ #speaking {
+     filter: brightness(100%);
+ }
+
+ #active {
+     display: flex;
+     flex-direction: column;
+ }
+
+ #inactive {
+     display: none;
+ }
+
+ .skillCheck {
+    display: flex;
+    align-self: start;
+    justify-content: start;
+ }
+
+ #overlay {
+     position: fixed;
+     display: none;
+     width: 100%;
+     height: 100%;
+     top: 0;
+     left: 0;
+     right: 0;
+     bottom: 0;
+     filter: blur(4px);
+     -webkit-filter: blur(4px);
+     z-index: 2;
+     cursor: pointer;
+ }
