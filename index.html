@@ -11,23 +11,51 @@
 
 <body>
     <div class="dialog" id="active">
-        <div class="dialogCharacter" id=""><img id="speaking" src="/images/characters/goblin.png" alt="">
-            <div class="npc" id="idle" alt=""></div>
+        <div class="dialogCharacter" id=""><img class="mainCharacter" id="idle" src="/images/characters/goblin.png"
+                alt="">
+            <div class="npc" id="speaking" alt=""></div>
         </div>
-        <section class="textBox" onclick="typeWriter()">
+        <section class="textBox" onclick="typeWriterClear()">
             <p id="demo"></p>
         </section>
     </div>
     <!-- option selector -->
     <div class="option">
-        <button type="submit" value="submit" class="option1">1</button>
-        <button type="submit" value="submit" class="option2">2</button>
-        <button type="reset" value="reset" class="option3">3</button>
+        <button id="button" type="submit" value="submit" class="option1" onclick="conversationCont(response)">1</button>
+        <button id="button" type="submit" value="submit" class="option2">2</button>
+        <button id="button" type="reset" value="reset" class="option3">3</button>
     </div>
-    <div class="skillCheck" id="overlay">
-        <p>skill</p>
+    <!-- skill/cheat -->
+    <div class="skillCheck">
+        <button id="button" onclick="on()">skill</button>
     </div>
+    <div id="overlay" onclick="off()">
+        <div id="text">
+            <h1>My Skills</h1>
 
+            <p>Coin</p>
+            <div class="container">
+                <div class="skills coins">90%</div>
+            </div>
+
+            <p>Card</p>
+            <div class="container">
+                <div class="skills cards">80%</div>
+            </div>
+
+            <p>Dice</p>
+            <div class="container">
+                <div class="skills dices">65%</div>
+            </div>
+
+        </div>
+    </div>
+    </div>
+    <!-- progress bar -->
+    <div id="mainProgress">
+        <div id="mainBar"></div>
+    </div>
+    <button id="wontUseFeature" onclick="move()">ProgressBar (loading page would remove this button)</button>
 
 </body>
 <script src="main.js"></script>
