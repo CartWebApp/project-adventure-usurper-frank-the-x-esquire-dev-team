@@ -31,7 +31,7 @@
      height: 200px;
      padding: 10px;
      border-radius: 10px;
-     overflow: hidden;
+     overflow-y: scroll;
  }
 
  .textBox p {
@@ -62,7 +62,7 @@
     cursor: pointer;    
  }
 
- #button {
+ .button {
      border: none;
      font-size: 16px;
      margin-top: 10px;
@@ -81,42 +81,20 @@
      align-self: flex-end;
  }
 
- .option1 {
+ #option1 ,#option2, #option3, #option4 {
      align-self: flex-end;
      width: 13rem;
      background-color: gray;
      color: black;
  }
 
- .option1:hover {
+ #option1:hover, #option2:hover, #option3:hover, #option4:hover {
      width: 15rem;
      background-color: gray;
      border: 1px solid black;
  }
 
- .option2 {
-     align-self: flex-end;
-     width: 13rem;
-     background-color: gray;
-     color: black;
- }
 
- .option2:hover {
-     width: 15rem;
-     border: 1px solid black;
- }
-
- .option3 {
-     align-self: flex-end;
-     width: 13rem;
-     background-color: gray;
-     color: black;
- }
-
- .option3:hover {
-     width: 15rem;
-     border: 1px solid black;
- }
 
  .npc {
      background: url(images/characters/goblin2.png);
@@ -142,8 +120,7 @@
  }
 
  #active {
-     display: flex;
-     flex-direction: column;
+    text-indent: 0;
  }
 
  #inactive {
@@ -225,3 +202,4 @@
     transition-duration: 0.4s;
     cursor: pointer;    
  }
+

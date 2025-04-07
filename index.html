@@ -10,8 +10,10 @@
 </head>
 
 <body>
+    
+
     <div class="dialog" id="active">
-        <div class="dialogCharacter" id=""><img class="mainCharacter" id="idle" src="/images/characters/goblin.png"
+        <div class="dialogCharacter" id="active"><img class="mainCharacter" id="idle" src="/images/characters/goblin.png"
                 alt="">
             <div class="npc" id="speaking" alt=""></div>
         </div>
@@ -21,9 +23,10 @@
     </div>
     <!-- option selector -->
     <div class="option">
-        <button id="button" type="submit" value="submit" class="option1" onclick="conversationCont(response)">1</button>
-        <button id="button" type="submit" value="submit" class="option2">2</button>
-        <button id="button" type="reset" value="reset" class="option3">3</button>
+        <button class="button" type="submit" value="submit" id="option1">1</button>
+        <button class="button" type="submit" value="submit" id="option2">2</button>
+        <button class="button" type="reset" value="reset" id="option3">3</button>
+        <button class="button" type="reset" value="reset" id="option4">4</button>
     </div>
     <!-- skill/cheat -->
     <div class="skillCheck">
@@ -56,8 +59,9 @@
         <div id="mainBar"></div>
     </div>
     <button id="wontUseFeature" onclick="move()">ProgressBar (loading page would remove this button)</button>
+    
 
 </body>
-<script src="main.js"></script>
+<script defer src="main.js"></script>
 
 </html>
