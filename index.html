@@ -10,11 +10,11 @@
 </head>
 
 <body>
-    
+
 
     <div class="dialog" id="active">
-        <div class="dialogCharacter" id="active"><img class="mainCharacter" id="idle" src="/images/characters/goblin.png"
-                alt="">
+        <div class="dialogCharacter" id="active"><img class="mainCharacter" id="idle"
+                src="/images/characters/goblin.png" alt="">
             <div class="npc" id="speaking" alt=""></div>
         </div>
         <section class="textBox" onclick="typeWriterClear()">
@@ -23,10 +23,10 @@
     </div>
     <!-- option selector -->
     <div class="option">
-        <button class="button" type="submit" value="submit" id="option1">1</button>
-        <button class="button" type="submit" value="submit" id="option2">2</button>
-        <button class="button" type="reset" value="reset" id="option3">3</button>
-        <button class="button" type="reset" value="reset" id="option4">4</button>
+        <button class="button">1</button>
+        <button class="button">2</button>
+        <button class="button">3</button>
+        <button class="button">4</button>
     </div>
     <!-- skill/cheat -->
     <div class="skillCheck">
@@ -54,12 +54,22 @@
         </div>
     </div>
     </div>
-    <!-- progress bar -->
-    <div id="mainProgress">
+    <!-- progress bar (it look mess so just leave it right now)-->
+    <!-- <div id="mainProgress">
         <div id="mainBar"></div>
     </div>
-    <button id="wontUseFeature" onclick="move()">ProgressBar (loading page would remove this button)</button>
-    
+    <div class="tab">
+        <button class="tablinks" onclick="openBackpack(event, 'Inventory')" id="defaultOpen">Backpack</button>
+        <button class="tablinks" onclick="openBackpack(event, 'Guide')">Guide</button>
+        <button class="tablinks" onclick="openBackpack(event, 'Weapon')">Weapon</button>
+    </div>
+
+    <div id="Guide" class="tabcontent"></div>
+    <div id="Inventory" class="tabcontent"></div>
+    <div id="Weapon" class="tabcontent"></div> -->
+<!-- 
+    <button id="wontUseFeature" onclick="move()">ProgressBar (loading page would remove this button)</button> -->
+
 
 </body>
 <script defer src="main.js"></script>

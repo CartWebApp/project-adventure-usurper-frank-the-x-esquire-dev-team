@@ -1,16 +1,28 @@
 // Character Data
 var player = {};
 
+// Spy state
 
+let spy = {}
 
+// Active/Inactive Displays
 
+// as long as something has a class, this will work
+// just make sure to add the quotations in the parameter
+// Ex: displayVisibility(`dialog`)
 
-
+function displayVisiblity(display) {
+    if(document.getElementsByClassName(display)[0].id !== `inactive`){
+        document.getElementsByClassName(display)[0].id = `inactive`;
+    } else if (document.getElementsByClassName(display)[0].id !== `active`){
+        document.getElementsByClassName(display)[0].id = `active`;
+    }
+}
 
 
 // Dialog typewriter effect
 var i = 0;
-var txt = 'Hey man, how are you?';
+var txt = '';
 var speed = 50;
 
 
@@ -34,6 +46,8 @@ function typeWriterClear() {
 const test = "url(images/characters/goblin.png)";
 
 const mentor = "url(images/characters/goblin2.png)";
+
+const sans = "url(images/characters/goblinSans.png)";
 
 
 
@@ -69,21 +83,82 @@ function off() {
 }
 
 // Conversation Data
-const optionButtonsElement = document.getElementById(`option-buttons`);
 
-// const textNodes = [
-//     {
-//         // intro
-//         id: 1,
-//         text: ``,
-//         options: [
-//             {
-//                 text: `Continue`
-//                 nextText: 1,
-//             },
-//         ]
-//     }
-// ]
+
+
+const optionButtonsElement = document.getElementsByClassName(`option`)[0];
+
+
+
+function startGame() {
+    spy = {}
+    displayVisiblity(`dialogCharacter`)
+    showTextNode(1)
+    typeWriterClear()
+}
+
+function showTextNode(textNodeIndex) {
+    const textNode = textNodes.find(textNode => textNode.id === textNodeIndex)
+    txt = textNode.text
+    while (optionButtonsElement.firstChild) {
+        optionButtonsElement.removeChild(optionButtonsElement.firstChild)
+    }
+
+    textNode.options.forEach(option => {
+        if (showOption(option)) {
+            const button = document.createElement(`button`)
+            button.innerText = option.text
+            button.classList.add(`button`)
+            button.addEventListener(`click`, () => selectOption(option))
+            optionButtonsElement.appendChild(button)
+        }
+    })
+}
+
+function showOption(option) {
+    return option.requiredState == null || option.requiredState(state)
+}
+
+function selectOption(option) {
+    const nextTextNodeId = option.nextText
+    spy = Object.assign(spy, option.setState)
+    showTextNode(nextTextNodeId)
+    typeWriterClear()
+}
+
+const textNodes = [
+    {
+        // intro
+        id: 1,
+        text: `A couple millennium ago, the first goblin societies began to form. They were few and far between, with the most successful of them having populations numbering only in the dozens. Then they had a breakthrough, they created the first set of dice. This invention revolutionized the way that goblin society worked. The creation of these first dice allowed the goblins of old to unite, creating the megacity of Qhrazrindrit. The usage of dice began to intertwine with the day-to-day lives of every goblin. They used these dice to determine how successful they were going to be at an action, and because they believed it would work, it did.`,
+        options: [
+            {
+                text: `Continue`,
+                nextText: 2,
+            },
+        ]
+    },
+    {
+        id: 2,
+        text:`For a while, life as a goblin was good, that was until the creation of the casino. The prospect of being able to gain wealth from gambling led many goblins to begin cheating. They began creating various ways to cheat: uneven dice, loaded dice, magnetic dice, and various other ways to cheat.`,
+        options: [
+            {
+                text:`Continue`,
+                nextText: 3,
+            }
+        ]
+    },
+    {
+        id: 3,
+        text: ` At first, these cheats were only used within casinos, but the eventual spread of these cheats would lead to the collapse of a majority of organized governments. In their place, a small few cheated their way to power, establishing large clans to enforce their rule. The largest of these clans is stationed within Qhrazrindrit, where they repurposed many old buildings to create casinos.`,
+        options: [
+            {
+                text:`Continue`,
+                nextText: 4,
+            }
+        ]
+    }
+]
 
 let response = `Fortnite is an online video game and game platform developed by Epic Games and released in 2017. It is available in seven distinct game mode versions that otherwise share the same general gameplay and game engine: Fortnite Battle Royale, a battle royale game in which up to 100 players fight to be the last person standing; Fortnite: Save the World, a cooperative hybrid tower defense-shooter and survival game in which up to four players fight off zombie-like creatures and defend objects with traps and fortifications they can build; Fortnite Creative, in which players are given complete freedom to create worlds and battle arenas; Lego Fortnite, an open world game collection divided between survival game Lego Fortnite Odyssey and social game Lego Fortnite Brick Life; Rocket Racing, a racing game; Fortnite Festival, a rhythm game; and Fortnite Ballistic, a tactical first-person shooter currently in early access. All game modes except Save the World are free-to-play.`;
 
@@ -114,3 +189,22 @@ function move() {
 }
 
 
+// Inventory )?
+function openBackpack(evt, backpackName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(backpackName).style.display = "block";
+    evt.currentTarget.className += " active";
+  }
+  
+  // Get the element with id="defaultOpen" and click on it
+//   document.getElementById("defaultOpen").click();
+
+  startGame();
