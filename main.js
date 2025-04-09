@@ -41,7 +41,7 @@ function typeWriterClear() {
     typeWriter();
 }
 
-// Character Dialog image changer
+// Character Images
 
 const test = "url(images/characters/goblin.png)";
 
@@ -49,7 +49,13 @@ const mentor = "url(images/characters/goblin2.png)";
 
 const sans = "url(images/characters/goblinSans.png)";
 
+// Background Images
 
+const loadingbg = `#2F2F2F`;
+
+const testBg = `url(images/environment/casinobg.jpg)`;
+
+// Character Dialog image changer
 
 function characterChange(newCharacter) {
     document.getElementsByClassName(`npc`)[0].style.backgroundImage = newCharacter;
@@ -91,6 +97,9 @@ const optionButtonsElement = document.getElementsByClassName(`option`)[0];
 
 
 function startGame() {
+    sceneChange(testBg)
+    displayVisiblity(`main`)
+    displayVisiblity(`dice-container`)
     spy = {}
     displayVisiblity(`dialogCharacter`)
     showTextNode(1)
@@ -160,13 +169,25 @@ const textNodes = [
     }
 ]
 
-let response = `Fortnite is an online video game and game platform developed by Epic Games and released in 2017. It is available in seven distinct game mode versions that otherwise share the same general gameplay and game engine: Fortnite Battle Royale, a battle royale game in which up to 100 players fight to be the last person standing; Fortnite: Save the World, a cooperative hybrid tower defense-shooter and survival game in which up to four players fight off zombie-like creatures and defend objects with traps and fortifications they can build; Fortnite Creative, in which players are given complete freedom to create worlds and battle arenas; Lego Fortnite, an open world game collection divided between survival game Lego Fortnite Odyssey and social game Lego Fortnite Brick Life; Rocket Racing, a racing game; Fortnite Festival, a rhythm game; and Fortnite Ballistic, a tactical first-person shooter currently in early access. All game modes except Save the World are free-to-play.`;
-
 function conversationCont(reply) {
     speakerSwap();
     txt = reply;
     typeWriterClear();
 }
+
+// Background Scene Change
+let backgroundScene = document.getElementById(`body`);
+
+
+
+function sceneChange(newScene) {
+    backgroundScene.style.background = newScene;
+    backgroundScene.style.backgroundSize = `cover`; 
+}
+
+let response = `Fortnite is an online video game and game platform developed by Epic Games and released in 2017. It is available in seven distinct game mode versions that otherwise share the same general gameplay and game engine: Fortnite Battle Royale, a battle royale game in which up to 100 players fight to be the last person standing; Fortnite: Save the World, a cooperative hybrid tower defense-shooter and survival game in which up to four players fight off zombie-like creatures and defend objects with traps and fortifications they can build; Fortnite Creative, in which players are given complete freedom to create worlds and battle arenas; Lego Fortnite, an open world game collection divided between survival game Lego Fortnite Odyssey and social game Lego Fortnite Brick Life; Rocket Racing, a racing game; Fortnite Festival, a rhythm game; and Fortnite Ballistic, a tactical first-person shooter currently in early access. All game modes except Save the World are free-to-play.`;
+
+
 
 // progress bar
 var i = 0;
@@ -207,4 +228,29 @@ function openBackpack(evt, backpackName) {
   // Get the element with id="defaultOpen" and click on it
 //   document.getElementById("defaultOpen").click();
 
-  startGame();
+function preLoad() {
+    sceneChange(loadingbg);
+    displayVisiblity(`main`);
+    setTimeout(startGame, 8000);
+}
+
+
+//   Dice Progress Bar JS (written by copilot)
+function diceProgressBar() {
+    const diceElements = document.querySelectorAll(".dice");
+    let progress = 0;
+
+    const interval = setInterval(() => {
+        if (progress < diceElements.length) {
+            diceElements[progress].style.color = "white"; // Change color to white progressively
+            progress++;
+        } else {
+            clearInterval(interval);
+        }
+    }, 1000); // Adjust speed of progress (500ms per dice)
+}
+
+// Start the dice progress bar when the page loads
+window.onload = diceProgressBar;
+
+preLoad();

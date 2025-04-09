@@ -9,9 +9,9 @@
 
 </head>
 
-<body>
+<body class="body" id="body">
 
-
+<main class="main">
     <div class="dialog" id="active">
         <div class="dialogCharacter" id="active"><img class="mainCharacter" id="idle"
                 src="/images/characters/goblin.png" alt="">
@@ -54,6 +54,11 @@
         </div>
     </div>
     </div>
+
+    <!-- Dice progress Bar -->
+    
+
+    
     <!-- progress bar (it look mess so just leave it right now)-->
     <!-- <div id="mainProgress">
         <div id="mainBar"></div>
@@ -70,6 +75,16 @@
 <!-- 
     <button id="wontUseFeature" onclick="move()">ProgressBar (loading page would remove this button)</button> -->
 
+</main>
+
+<div class="dice-container">
+    <div class="dice">⚀</div>
+    <div class="dice">⚁</div>
+    <div class="dice">⚂</div>
+    <div class="dice">⚃</div>
+    <div class="dice">⚄</div>
+    <div class="dice">⚅</div>
+</div>
 
 </body>
 <script defer src="main.js"></script>
