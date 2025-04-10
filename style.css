@@ -74,10 +74,12 @@
      height: 2rem;
      transition-duration: 0.4s;
      cursor: pointer;
+     color: white;
  }
 
  .button {
      border: none;
+     color: white;
      font-size: 16px;
      margin-top: 10px;
      height: 2rem;
@@ -99,7 +101,7 @@
      align-self: flex-end;
      width: 13rem;
      background-color: gray;
-     color: black;
+     color: rgb(255, 255, 255);
  }
 
  .button:hover {

@@ -23,7 +23,7 @@ function displayVisiblity(display) {
 // Dialog typewriter effect
 var i = 0;
 var txt = '';
-var speed = 50;
+var speed = 35;
 
 
 function typeWriter() {
@@ -43,17 +43,20 @@ function typeWriterClear() {
 
 // Character Images
 
-const test = "url(images/characters/goblin.png)";
-
-const mentor = "url(images/characters/goblin2.png)";
-
+const hero = "url(images/characters/goblin.png)";
+const heroRear = "url(images/characters/goblinBack1.png)"
+const heroRearAlt = `url(images/characters/goblinBack2.png)`
+const mentor = "url(images/characters/goblinmentor.png)";
+const goblinResist = `url(images/characters/goblin2.png)`;
+const goblinClan = `url(images/characters/goblin3.png)`
 const sans = "url(images/characters/goblinSans.png)";
 
 // Background Images
 
 const loadingbg = `#2F2F2F`;
-
+const casinoInner = `url(images/environment/goblincasinointerior.jpg)`;
 const testBg = `url(images/environment/casinobg.jpg)`;
+const epiloguebg = `url(images/environment/epiloguebg.png)`;
 
 // Character Dialog image changer
 
@@ -97,7 +100,7 @@ const optionButtonsElement = document.getElementsByClassName(`option`)[0];
 
 
 function startGame() {
-    sceneChange(testBg)
+    sceneChange(epiloguebg)
     displayVisiblity(`main`)
     displayVisiblity(`dice-container`)
     spy = {}
@@ -166,6 +169,25 @@ const textNodes = [
                 nextText: 4,
             }
         ]
+    },
+    {
+        id: 4,
+        text: `They have begun setting up casinos in various cities nearby to expand their control, but lately there has been some resistance. The Resistance is made up of a relatively large number of goblins from all around the world. This group has one goal in mind; to wipe out the clan and restore order to goblinkind.`,
+        options: [
+            {
+                text:`Continue`,
+                nextText: 5,
+            }
+        ]
+    },
+    {
+        id: 5,
+        text: `Your story begins in the small rural village of Thornbrook. You are a small goblin who lives a quiet life in this quiet village.`,
+        options: [
+            {
+
+            }
+        ]
     }
 ]
 
@@ -182,7 +204,9 @@ let backgroundScene = document.getElementById(`body`);
 
 function sceneChange(newScene) {
     backgroundScene.style.background = newScene;
-    backgroundScene.style.backgroundSize = `cover`; 
+    backgroundScene.style.backgroundSize = `cover`;
+    backgroundScene.style.backgroundRepeat = `no-repeat` 
+    backgroundScene.style.backgroundPosition = `center`;
 }
 
 let response = `Fortnite is an online video game and game platform developed by Epic Games and released in 2017. It is available in seven distinct game mode versions that otherwise share the same general gameplay and game engine: Fortnite Battle Royale, a battle royale game in which up to 100 players fight to be the last person standing; Fortnite: Save the World, a cooperative hybrid tower defense-shooter and survival game in which up to four players fight off zombie-like creatures and defend objects with traps and fortifications they can build; Fortnite Creative, in which players are given complete freedom to create worlds and battle arenas; Lego Fortnite, an open world game collection divided between survival game Lego Fortnite Odyssey and social game Lego Fortnite Brick Life; Rocket Racing, a racing game; Fortnite Festival, a rhythm game; and Fortnite Ballistic, a tactical first-person shooter currently in early access. All game modes except Save the World are free-to-play.`;
