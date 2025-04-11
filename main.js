@@ -1,9 +1,11 @@
 // Character Data
 var player = {};
 
-// Spy state
+// States
 
 let spy = {}
+let cheater = {}
+
 
 // Active/Inactive Displays
 
@@ -53,7 +55,6 @@ const sans = "url(images/characters/goblinSans.png)";
 
 // Background Images
 
-const loadingbg = `#2F2F2F`;
 const casinoInner = `url(images/environment/goblincasinointerior.jpg)`;
 const testBg = `url(images/environment/casinobg.jpg)`;
 const epiloguebg = `url(images/environment/epiloguebg.png)`;
@@ -100,8 +101,8 @@ const optionButtonsElement = document.getElementsByClassName(`option`)[0];
 
 
 function startGame() {
+    displayVisiblity(`loading`)
     sceneChange(epiloguebg)
-    displayVisiblity(`main`)
     displayVisiblity(`dice-container`)
     spy = {}
     displayVisiblity(`dialogCharacter`)
@@ -253,8 +254,7 @@ function openBackpack(evt, backpackName) {
 //   document.getElementById("defaultOpen").click();
 
 function preLoad() {
-    sceneChange(loadingbg);
-    displayVisiblity(`main`);
+    
     setTimeout(startGame, 8000);
 }
 
