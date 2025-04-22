@@ -12,7 +12,7 @@
  #body {
      margin: 0;
      height: 100%;
-     
+
      background-size: cover;
      display: flex;
      flex-direction: column;
@@ -21,9 +21,9 @@
  }
 
  main {
-    height: 100%;
-    width: 100%;
-    display: flex;
+     height: 100%;
+     width: 100%;
+     display: flex;
      flex-direction: column-reverse;
      align-items: center;
      justify-content: flex-start;
@@ -82,7 +82,7 @@
      color: white;
      font-size: 16px;
      margin-top: 10px;
-     height: 2rem;
+     height: 3.5rem;
      border-top-left-radius: 15rem;
      border-bottom-left-radius: 15rem;
      transition-duration: 0.4s;
@@ -100,7 +100,7 @@
  .button {
      align-self: flex-end;
      width: 13rem;
-     background-color: gray;
+     background-color: dimgray;
      color: rgb(255, 255, 255);
  }
 
@@ -271,24 +271,79 @@
     text-align: center;
     font-family: Arial, sans-serif;
 } */
-.dice-container {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin-top: 50px;
-    z-index: 5;
-    position: absolute;
-}
-.dice {
-    font-size: 50px; /* Adjust dice size */
-    color: #404040; /* Dark grey as the starting color */
-    transition: color 0.3s ease; /* Smooth color change */
-}
+ .dice-container {
+     display: flex;
+     justify-content: center;
+     gap: 10px;
+     margin-top: 50px;
+     z-index: 5;
+     position: absolute;
+ }
 
-.loading {
-    width: 100%;
-    height: 100%;
-    background-color: #2F2F2F;
-    z-index: 2;
-    position: absolute;
-}
+ .dice {
+     font-size: 50px;
+     /* Adjust dice size */
+     color: #404040;
+     /* Dark grey as the starting color */
+     transition: color 0.3s ease;
+     /* Smooth color change */
+ }
+
+ .loading {
+     width: 100%;
+     height: 100%;
+     background-color: #2F2F2F;
+     z-index: 2;
+     position: absolute;
+ }
+
+ /* dice combat system */
+ .dice {
+     display: flex;
+ }
+
+ .die {
+     width: 50px;
+     height: 50px;
+     border-radius: 10px;
+     border: 1px solid #ddd;
+     margin: 10px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     font-size: 24px;
+     box-shadow: 5px 5px 10px rgba(255, 255, 255, 0.5);
+
+     &.roll {
+         animation: roll 0.5s infinite;
+     }
+ }
+
+ .rDice {
+     margin-top: 20px;
+     padding: 10px 20px;
+     font-size: 20px;
+     cursor: pointer;
+     border: none;
+     border-radius: 5px;
+     background-color: rgb(240, 240, 240, 0.5);
+     color: #000;
+     transition: 0.3s;
+     border: 1px solid #000;
+ }
+
+ .rDice:hover {
+     background-color: #000;
+     color: #fff;
+     border: 1px solid #ddd;
+ }
+
+ @keyframes roll {
+     0% {
+         transform: rotate(0deg);
+     }
+
+     100% {
+         transform: rotate(360deg);
+     }
+ }

@@ -2,7 +2,7 @@
 var player = {};
 
 // States
-
+let talent = {}
 let spy = {}
 let cheater = {}
 
@@ -99,12 +99,13 @@ function off() {
 const optionButtonsElement = document.getElementsByClassName(`option`)[0];
 
 
-
 function startGame() {
     displayVisiblity(`loading`)
     sceneChange(epiloguebg)
     displayVisiblity(`dice-container`)
     spy = {}
+    talent = {}
+    cheater = {}
     displayVisiblity(`dialogCharacter`)
     showTextNode(1)
     typeWriterClear()
@@ -132,12 +133,21 @@ function showOption(option) {
     return option.requiredState == null || option.requiredState(state)
 }
 
+function runFunc(option) {
+    let optionFunc = option.functions
+}
+
 function selectOption(option) {
     const nextTextNodeId = option.nextText
-    spy = Object.assign(spy, option.setState)
+    spy = option.setSpy
+    talent = option.setTalent
+    cheater = option.setCheater
+    console.log(talent)
     showTextNode(nextTextNodeId)
     typeWriterClear()
 }
+
+
 
 const textNodes = [
     {
@@ -158,6 +168,7 @@ const textNodes = [
             {
                 text:`Continue`,
                 nextText: 3,
+                
             }
         ]
     },
@@ -186,9 +197,45 @@ const textNodes = [
         text: `Your story begins in the small rural village of Thornbrook. You are a small goblin who lives a quiet life in this quiet village.`,
         options: [
             {
-
+                text:`Continue`,
+                nextText: 6,
             }
         ]
+    },
+    {
+        id: 6,
+        text: `What is your talent?`,
+        options: [
+            {
+                text: `Slight of Hand: You have an easier time cheating`,
+                setTalent: 1,
+                nextText: 7,
+            },
+            {
+                text: `Keen Eyes: Enemies have a harder time cheating `,
+                setTalent: 2,
+                nextText: 7,
+            },
+            {
+                text: `Overseer: Stops everyone from cheating for a turn`,
+                setTalent: 3,
+                nextText: 7,
+            }
+        ]
+    },
+    {
+        id: 7,
+        text: `While cooking a delicious stew, you begin to hear shouting outside your home. You go to take a look (goblins are very nosey after all) and you see what seems to be two groups yelling at eachother.`,
+        options: [
+            {
+                text:`Continue`,
+                nextText: 8,
+            }
+        ]
+    },
+    {
+        id: 8,
+        text: `Upon closer inspection, you realize that these `
     }
 ]
 
@@ -277,4 +324,47 @@ function diceProgressBar() {
 // Start the dice progress bar when the page loads
 window.onload = diceProgressBar;
 
-preLoad();
+// Roll Dice System(combat system)
+function rollSingleDie() {
+    return Math.floor(Math.random() * 6) + 1;
+  }
+  
+  function rollDice() {
+    const die1 = document.getElementById("die1");
+    const die2 = document.getElementById("die2");
+    const disSum = document.getElementById("sum");
+  
+    const result1 = rollSingleDie();
+    const result2 = rollSingleDie();
+  
+    const sum = result1 + result2;
+  
+    die1.innerHTML = result1;
+    die2.innerHTML = result2;
+    disSum.innerHTML = "Sum: " + sum;
+    // add animation class
+  
+    die1.classList.add("roll");
+    die2.classList.add("roll");
+  
+    setTimeout(() => {
+      die1.classList.remove("roll");
+      die2.classList.remove("roll");
+    }, 500);
+  
+    // Remove animation class
+    die1.classList.remove("roll");
+    die2.classList.remove("roll");
+  
+    // Trigger reflow
+    void die1.offsetWidth;
+    void die2.offsetWidth;
+  
+    // Add animation class
+    die1.classList.add("roll");
+    die2.classList.add("roll");
+  }
+
+
+// preLoad();
+startGame();
