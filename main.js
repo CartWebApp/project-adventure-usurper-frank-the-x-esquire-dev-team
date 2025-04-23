@@ -94,7 +94,16 @@ function off() {
 
 // Conversation Data
 
+let functions = {
+    displayVisChar: displayVisiblity(`dialogCharacter`),
+    speakerSwap: speakerSwap(),
+    pass: function(){ return 1},
+    clanPortrait: characterChange(goblinClan),
+    resistPortrait: characterChange(goblinResist),
+    mentorPortrait: characterChange(mentor),
+    
 
+}
 
 const optionButtonsElement = document.getElementsByClassName(`option`)[0];
 
@@ -106,7 +115,6 @@ function startGame() {
     spy = {}
     talent = {}
     cheater = {}
-    displayVisiblity(`dialogCharacter`)
     showTextNode(1)
     typeWriterClear()
 }
@@ -134,11 +142,12 @@ function showOption(option) {
 }
 
 function runFunc(option) {
-    let optionFunc = option.functions
+    functions[option.funcRun]();
 }
 
 function selectOption(option) {
     const nextTextNodeId = option.nextText
+    runFunc(option)
     spy = option.setSpy
     talent = option.setTalent
     cheater = option.setCheater
@@ -158,6 +167,7 @@ const textNodes = [
             {
                 text: `Continue`,
                 nextText: 2,
+                funcRun: `pass`,
             },
         ]
     },
@@ -168,7 +178,7 @@ const textNodes = [
             {
                 text:`Continue`,
                 nextText: 3,
-                
+                funcRun: `pass`,
             }
         ]
     },
@@ -179,6 +189,7 @@ const textNodes = [
             {
                 text:`Continue`,
                 nextText: 4,
+                funcRun: `pass`,
             }
         ]
     },
@@ -189,6 +200,7 @@ const textNodes = [
             {
                 text:`Continue`,
                 nextText: 5,
+                funcRun: `pass`,
             }
         ]
     },
@@ -199,6 +211,7 @@ const textNodes = [
             {
                 text:`Continue`,
                 nextText: 6,
+                funcRun: `pass`,
             }
         ]
     },
@@ -210,16 +223,19 @@ const textNodes = [
                 text: `Slight of Hand: You have an easier time cheating`,
                 setTalent: 1,
                 nextText: 7,
+                funcRun: `pass`,
             },
             {
                 text: `Keen Eyes: Enemies have a harder time cheating `,
                 setTalent: 2,
                 nextText: 7,
+                funcRun: `pass`,
             },
             {
                 text: `Overseer: Stops everyone from cheating for a turn`,
                 setTalent: 3,
                 nextText: 7,
+                funcRun: `pass`,
             }
         ]
     },
@@ -230,13 +246,35 @@ const textNodes = [
             {
                 text:`Continue`,
                 nextText: 8,
+                funcRun: `pass`,
             }
         ]
     },
     {
         id: 8,
-        text: `Upon closer inspection, you realize that these `
+        text: `Upon closer inspection, you realize that they are members of the clan and resistance.`,
+        options: [
+            {
+                text:`Continue`,
+                nextText: 9,
+                funcRun: `displayVisChar`,
+                
+            }
+        ]
+    },
+    {
+        id: 9,
+        text: `Hey you!`,
+        options: [
+            {
+                text:`Who me?`,
+            },
+            {
+                text:`Can I help you?`,
+            }
+        ]
     }
+
 ]
 
 function conversationCont(reply) {
