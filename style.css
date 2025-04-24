@@ -71,10 +71,10 @@
      border: none;
      font-size: 16px;
      margin-top: 10px;
-     height: 2rem;
+     /* height: 2rem; */
      transition-duration: 0.4s;
      cursor: pointer;
-     color: white;
+     /* color: white; */
  }
 
  .button {
@@ -440,3 +440,5 @@
      background-color: #ffd700;
      color: #37473C;
  }
+
+
