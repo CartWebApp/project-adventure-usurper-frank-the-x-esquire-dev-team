@@ -344,7 +344,7 @@ const textNodes = [
     },
     {
         id: 15,
-        text: `Don't listen to these idiots, we were just doing a routine inspection under orders by the Archboss.`,
+        text: `Don't listen to these idiots, we were just doing a routine inspection under direct orders from the Archboss.`,
         options: [
             {
                 text:`Tell the resistance that they are in the wrong`,
@@ -352,6 +352,8 @@ const textNodes = [
             },
             {
                 text:`Tell the clan that they still need to get lost`,
+                nextText: 16,
+                funcRun:`speakerSwap`,
             },
             {
                 text:`Insult the two parties and tell them to get out of your town NOW`,
