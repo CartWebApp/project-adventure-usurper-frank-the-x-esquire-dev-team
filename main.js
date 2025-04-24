@@ -58,6 +58,11 @@ const sans = "url(images/characters/goblinSans.png)";
 const casinoInner = `url(images/environment/goblincasinointerior.jpg)`;
 const testBg = `url(images/environment/casinobg.jpg)`;
 const epiloguebg = `url(images/environment/epiloguebg.png)`;
+const hometownbg = `url(images/environment/hometown.jpg)`;
+const obsidianbg = `url(images/environment/obsidiancrag.jpg)`;
+const greenrockbg = `url(images/environment/greenrock.jpg)`;
+const charcoalbg = `url(images/environment/charcoalquarry.jpg)`;
+const tavernbg = `url(images/environment/tavern.jpg)`;
 
 // Character Dialog image changer
 
@@ -101,8 +106,16 @@ let functions = {
     clanPortrait:function() {characterChange(goblinClan)},
     resistPortrait:function() {characterChange(goblinResist)},
     mentorPortrait:function() {characterChange(mentor)},
-    
-
+    clanSpeak: function() {characterChange(goblinClan); speakerSwap()},
+    resistSpeak:function() {characterChange(goblinResist); speakerSwap()} ,
+    mentorSpeak: function() {characterChange(mentor); speakerSwap()},
+    bgSwapObsid: function() {sceneChange(obsidianbg)},
+    bgSwapChar: function() {sceneChange(charcoalbg)},
+    bgSwapGreen: function() {sceneChange(greenrockbg)},
+    bgSwapHome: function() {sceneChange(hometownbg)},
+    bgSwapCasinoIn: function() {sceneChange(casinoInner)},
+    bgSwapEpilogue: function() {sceneChange(epiloguebg)},
+    bgSwapTavern: function() {sceneChange(tavernbg)}
 }
 
 const optionButtonsElement = document.getElementsByClassName(`option`)[0];
@@ -182,7 +195,7 @@ const textNodes = [
             {
                 text:`Continue`,
                 nextText: 3,
-                funcRun: `pass`,
+                funcRun: `bgSwapCasinoIn`,
             }
         ]
     },
@@ -215,7 +228,7 @@ const textNodes = [
             {
                 text:`Continue`,
                 nextText: 6,
-                funcRun: `pass`,
+                funcRun: `bgSwapHome`,
             }
         ]
     },
@@ -268,7 +281,7 @@ const textNodes = [
     },
     {
         id: 9,
-        text: `Hey you!`,
+        text: `"Hey you!"`,
         options: [
             {
                 text:`Answer rudely`,
@@ -306,7 +319,7 @@ const textNodes = [
     },
     {
         id: 12,
-        text: `We just need your help solving a little... dispute, that's all.`,
+        text: `"We just need your help solving a little... dispute, that's all."`,
         options : [
             {
                 text: `Continue`,
@@ -317,7 +330,7 @@ const textNodes = [
     },
     {
         id: 13,
-        text: `Well Mr. Fancy-Pants, we need you to mediate a disagreement between us and some friends of ours.`,
+        text: `"Well Mr. Fancy-Pants, we need you to mediate a disagreement between us and some friends of ours."`,
         options : [
             {
                 text: `Continue`,
@@ -328,10 +341,10 @@ const textNodes = [
     },
     {
         id: 14,
-        text: `Yeah, these guys are intruding on OUR TURF, now tell 'em to GET LOST!`,
+        text: `"Yeah, these guys are intruding on OUR TURF, now tell 'em to GET LOST!"`,
         options: [
             {
-                text: `Tell the clan members get lost`,
+                text: `Tell the clan members to get lost`,
                 nextText: 16,
                 funcRun: `speakerSwap`
             },
@@ -344,7 +357,7 @@ const textNodes = [
     },
     {
         id: 15,
-        text: `Don't listen to these idiots, we were just doing a routine inspection under direct orders from the Archboss.`,
+        text: `"Don't listen to these idiots, we were just doing a routine inspection under direct orders from the Archboss."`,
         options: [
             {
                 text:`Tell the resistance that they are in the wrong`,
@@ -360,6 +373,98 @@ const textNodes = [
             }
         ]
     },
+    {
+        id: 16,
+        text: `Get lost you guys, you have no business being here anyways.`,
+        options: [
+            {
+                text:`Continue`,
+                nextText: 17,
+                funcRun: `clanSpeak`
+            }
+        ]
+    },
+    {
+        id: 17,
+        text: `"Ughhh, I didn't want to have to do this man, everyone, GET 'EM"`,
+        options: [
+            {
+                text:`Continue`,
+                nextText: 18,
+                funcRun: `mentorPortrait`
+            }
+        ]
+    },
+    {
+        id: 18,
+        text: `"STOP RIGHT THERE YOU... RAPSCALLIONS?... ruffians?... YES, RUFFIANS!" An old goblin runs at your newfound aggressors and beats them with a newspaper.`,
+        options: [
+            {
+                text:`Continue`,
+                nextText: 19,
+                funcRun: `clanPortrait`
+            }
+        ]
+    },
+    {
+        id: 19,
+        text: `"ACK! STOP YOU OLD MAN! THAT HURTS! BY THE AUTHORITY OF THE ARCHBOSS I ORDER YOU TO STOP! ARGH! IT'S TOO MUCH... RETREAT!"`,
+        options: [
+            {
+                text:`Continue`,
+                nextText: 20,
+                funcRun: `resistPortrait`
+            }
+        ]
+    },
+    {
+        id: 20,
+        text:`"Hey kid, you did pretty good out there too! Why don't you come and join us at our base camp nearby?"`,
+        options: [
+            {
+                text:`Continue`,
+                nextText:21,
+                funcRun: `mentorPortrait` 
+            }
+        ]
+    },
+    {
+        id: 21,
+        text:`"Remember what I said young one, 'Never cheat'!"`,
+        options: [
+            {
+                text: `Follow your new resistance friends to their base`,
+                nextText: 22,
+                funcRun: `displayVisChar`
+            }
+        ]
+    },
+    {
+        id: 22,
+        text:`You arrive at the small town of Greenrock. Here you will find a small shop and tavern, where you may be able to find some quests.`,
+        options: [
+            {
+                text: `Enter and explore the town`,
+                nextText: 23,
+                funcRun: `bgSwapGreen`
+            }
+        ]
+    },
+    {
+        id: 23,
+        text: `You find yourself standing in the middle of Greenrock. What do you wish to do?`,
+        options: [
+            {
+                text: `Enter the tavern`,
+                nextText: 24,
+                funcRun: `bgSwapTavern`,
+            }
+        ]
+    },
+    {
+        id: 24,
+        text: `Y`
+    }
 
 ]
 
