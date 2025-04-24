@@ -95,12 +95,12 @@ function off() {
 // Conversation Data
 
 let functions = {
-    displayVisChar: displayVisiblity(`dialogCharacter`),
-    speakerSwap: speakerSwap(),
+    displayVisChar:function() {displayVisiblity(`dialogCharacter`)},
+    speakerSwap:function() {speakerSwap()},
     pass: function(){ return 1},
-    clanPortrait: characterChange(goblinClan),
-    resistPortrait: characterChange(goblinResist),
-    mentorPortrait: characterChange(mentor),
+    clanPortrait:function() {characterChange(goblinClan)},
+    resistPortrait:function() {characterChange(goblinResist)},
+    mentorPortrait:function() {characterChange(mentor)},
     
 
 }
@@ -112,6 +112,10 @@ function startGame() {
     displayVisiblity(`loading`)
     sceneChange(epiloguebg)
     displayVisiblity(`dice-container`)
+    displayVisiblity(`box`)
+    displayVisiblity(`diceSystem`)
+    displayVisiblity(`dialogCharacter`)
+    displayVisiblity(`skillCheck`)
     spy = {}
     talent = {}
     cheater = {}
@@ -244,9 +248,9 @@ const textNodes = [
         text: `While cooking a delicious stew, you begin to hear shouting outside your home. You go to take a look (goblins are very nosey after all) and you see what seems to be two groups yelling at eachother.`,
         options: [
             {
-                text:`Continue`,
+                text:`Figure out who the two parties are`,
                 nextText: 8,
-                funcRun: `pass`,
+                funcRun: `clanPortrait`,
             }
         ]
     },
@@ -267,13 +271,93 @@ const textNodes = [
         text: `Hey you!`,
         options: [
             {
-                text:`Who me?`,
+                text:`Answer rudely`,
+                nextText:10,
+                funcRun: `speakerSwap`,
             },
             {
-                text:`Can I help you?`,
+                text:`Answer respectfully`,
+                nextText:11,
+                funcRun: `speakerSwap`,
             }
         ]
-    }
+    },
+    {
+        id: 10,
+        text: `What could you possibly want from me ya idiots?`,
+        options: [
+            {
+                text: `Continue`,
+                nextText: 12,
+                funcRun: `speakerSwap`,
+            }
+        ]
+    },
+    {
+        id: 11,
+        text: `How may I be of your assistance my good sir?`,
+        options: [
+            {
+                text: `Continue`,
+                nextText: 13,
+                funcRun: `speakerSwap`,
+            }
+        ]
+    },
+    {
+        id: 12,
+        text: `We just need your help solving a little... dispute, that's all.`,
+        options : [
+            {
+                text: `Continue`,
+                nextText: 14,
+                funcRun: `resistPortrait`
+            }
+        ]
+    },
+    {
+        id: 13,
+        text: `Well Mr. Fancy-Pants, we need you to mediate a disagreement between us and some friends of ours.`,
+        options : [
+            {
+                text: `Continue`,
+                nextText: 14,
+                funcRun: `resistPortrait`
+            }
+        ]
+    },
+    {
+        id: 14,
+        text: `Yeah, these guys are intruding on OUR TURF, now tell 'em to GET LOST!`,
+        options: [
+            {
+                text: `Tell the clan members get lost`,
+                nextText: 16,
+                funcRun: `speakerSwap`
+            },
+            {
+                text: `Hear what the clan has to say`,
+                nextText: 15,
+                funcRun: `clanPortrait`,
+            }
+        ]
+    },
+    {
+        id: 15,
+        text: `Don't listen to these idiots, we were just doing a routine inspection under orders by the Archboss.`,
+        options: [
+            {
+                text:`Tell the resistance that they are in the wrong`,
+                
+            },
+            {
+                text:`Tell the clan that they still need to get lost`,
+            },
+            {
+                text:`Insult the two parties and tell them to get out of your town NOW`,
+            }
+        ]
+    },
 
 ]
 
