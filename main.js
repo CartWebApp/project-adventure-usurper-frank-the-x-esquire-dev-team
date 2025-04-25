@@ -14,9 +14,9 @@ let cheater = {}
 // Ex: displayVisibility(`dialog`)
 
 function displayVisiblity(display) {
-    if(document.getElementsByClassName(display)[0].id !== `inactive`){
+    if (document.getElementsByClassName(display)[0].id !== `inactive`) {
         document.getElementsByClassName(display)[0].id = `inactive`;
-    } else if (document.getElementsByClassName(display)[0].id !== `active`){
+    } else if (document.getElementsByClassName(display)[0].id !== `active`) {
         document.getElementsByClassName(display)[0].id = `active`;
     }
 }
@@ -33,7 +33,7 @@ function typeWriter() {
         document.getElementById("demo").innerHTML += txt.charAt(i);
         i++;
         setTimeout(typeWriter, speed);
-        document.getElementById("demo").scrollIntoView({behavior: `smooth`, block:`end`,});
+        document.getElementById("demo").scrollIntoView({ behavior: `smooth`, block: `end`, });
     }
 }
 
@@ -100,22 +100,22 @@ function off() {
 // Conversation Data
 
 let functions = {
-    displayVisChar:function() {displayVisiblity(`dialogCharacter`)},
-    speakerSwap:function() {speakerSwap()},
-    pass: function(){ return 1},
-    clanPortrait:function() {characterChange(goblinClan)},
-    resistPortrait:function() {characterChange(goblinResist)},
-    mentorPortrait:function() {characterChange(mentor)},
-    clanSpeak: function() {characterChange(goblinClan); speakerSwap()},
-    resistSpeak:function() {characterChange(goblinResist); speakerSwap()} ,
-    mentorSpeak: function() {characterChange(mentor); speakerSwap()},
-    bgSwapObsid: function() {sceneChange(obsidianbg)},
-    bgSwapChar: function() {sceneChange(charcoalbg)},
-    bgSwapGreen: function() {sceneChange(greenrockbg)},
-    bgSwapHome: function() {sceneChange(hometownbg)},
-    bgSwapCasinoIn: function() {sceneChange(casinoInner)},
-    bgSwapEpilogue: function() {sceneChange(epiloguebg)},
-    bgSwapTavern: function() {sceneChange(tavernbg)}
+    displayVisChar: function () { displayVisiblity(`dialogCharacter`) },
+    speakerSwap: function () { speakerSwap() },
+    pass: function () { return 1 },
+    clanPortrait: function () { characterChange(goblinClan) },
+    resistPortrait: function () { characterChange(goblinResist) },
+    mentorPortrait: function () { characterChange(mentor) },
+    clanSpeak: function () { characterChange(goblinClan); speakerSwap() },
+    resistSpeak: function () { characterChange(goblinResist); speakerSwap() },
+    mentorSpeak: function () { characterChange(mentor); speakerSwap() },
+    bgSwapObsid: function () { sceneChange(obsidianbg) },
+    bgSwapChar: function () { sceneChange(charcoalbg) },
+    bgSwapGreen: function () { sceneChange(greenrockbg) },
+    bgSwapHome: function () { sceneChange(hometownbg) },
+    bgSwapCasinoIn: function () { sceneChange(casinoInner) },
+    bgSwapEpilogue: function () { sceneChange(epiloguebg) },
+    bgSwapTavern: function () { sceneChange(tavernbg) }
 }
 
 const optionButtonsElement = document.getElementsByClassName(`option`)[0];
@@ -190,10 +190,10 @@ const textNodes = [
     },
     {
         id: 2,
-        text:`For a while, life as a goblin was good, that was until the creation of the casino. The prospect of being able to gain wealth from gambling led many goblins to begin cheating. They began creating various ways to cheat: uneven dice, loaded dice, magnetic dice, and various other ways to cheat.`,
+        text: `For a while, life as a goblin was good, that was until the creation of the casino. The prospect of being able to gain wealth from gambling led many goblins to begin cheating. They began creating various ways to cheat: uneven dice, loaded dice, magnetic dice, and various other ways to cheat.`,
         options: [
             {
-                text:`Continue`,
+                text: `Continue`,
                 nextText: 3,
                 funcRun: `bgSwapCasinoIn`,
             }
@@ -204,7 +204,7 @@ const textNodes = [
         text: ` At first, these cheats were only used within casinos, but the eventual spread of these cheats would lead to the collapse of a majority of organized governments. In their place, a small few cheated their way to power, establishing large clans to enforce their rule. The largest of these clans is stationed within Qhrazrindrit, where they repurposed many old buildings to create casinos.`,
         options: [
             {
-                text:`Continue`,
+                text: `Continue`,
                 nextText: 4,
                 funcRun: `pass`,
             }
@@ -215,7 +215,7 @@ const textNodes = [
         text: `They have begun setting up casinos in various cities nearby to expand their control, but lately there has been some resistance. The Resistance is made up of a relatively large number of goblins from all around the world. This group has one goal in mind; to wipe out the clan and restore order to goblinkind.`,
         options: [
             {
-                text:`Continue`,
+                text: `Continue`,
                 nextText: 5,
                 funcRun: `pass`,
             }
@@ -226,7 +226,7 @@ const textNodes = [
         text: `Your story begins in the small rural village of Thornbrook. You are a small goblin who lives a quiet life in this quiet village.`,
         options: [
             {
-                text:`Continue`,
+                text: `Continue`,
                 nextText: 6,
                 funcRun: `bgSwapHome`,
             }
@@ -261,7 +261,7 @@ const textNodes = [
         text: `While cooking a delicious stew, you begin to hear shouting outside your home. You go to take a look (goblins are very nosey after all) and you see what seems to be two groups yelling at eachother.`,
         options: [
             {
-                text:`Figure out who the two parties are`,
+                text: `Figure out who the two parties are`,
                 nextText: 8,
                 funcRun: `clanPortrait`,
             }
@@ -272,10 +272,10 @@ const textNodes = [
         text: `Upon closer inspection, you realize that they are members of the clan and resistance.`,
         options: [
             {
-                text:`Continue`,
+                text: `Continue`,
                 nextText: 9,
                 funcRun: `displayVisChar`,
-                
+
             }
         ]
     },
@@ -284,13 +284,13 @@ const textNodes = [
         text: `"Hey you!"`,
         options: [
             {
-                text:`Answer rudely`,
-                nextText:10,
+                text: `Answer rudely`,
+                nextText: 10,
                 funcRun: `speakerSwap`,
             },
             {
-                text:`Answer respectfully`,
-                nextText:11,
+                text: `Answer respectfully`,
+                nextText: 11,
                 funcRun: `speakerSwap`,
             }
         ]
@@ -320,7 +320,7 @@ const textNodes = [
     {
         id: 12,
         text: `"We just need your help solving a little... dispute, that's all."`,
-        options : [
+        options: [
             {
                 text: `Continue`,
                 nextText: 14,
@@ -331,7 +331,7 @@ const textNodes = [
     {
         id: 13,
         text: `"Well Mr. Fancy-Pants, we need you to mediate a disagreement between us and some friends of ours."`,
-        options : [
+        options: [
             {
                 text: `Continue`,
                 nextText: 14,
@@ -360,16 +360,16 @@ const textNodes = [
         text: `"Don't listen to these idiots, we were just doing a routine inspection under direct orders from the Archboss."`,
         options: [
             {
-                text:`Tell the resistance that they are in the wrong`,
-                
+                text: `Tell the resistance that they are in the wrong`,
+
             },
             {
-                text:`Tell the clan that they still need to get lost`,
+                text: `Tell the clan that they still need to get lost`,
                 nextText: 16,
-                funcRun:`speakerSwap`,
+                funcRun: `speakerSwap`,
             },
             {
-                text:`Insult the two parties and tell them to get out of your town NOW`,
+                text: `Insult the two parties and tell them to get out of your town NOW`,
             }
         ]
     },
@@ -378,7 +378,7 @@ const textNodes = [
         text: `Get lost you guys, you have no business being here anyways.`,
         options: [
             {
-                text:`Continue`,
+                text: `Continue`,
                 nextText: 17,
                 funcRun: `clanSpeak`
             }
@@ -389,7 +389,7 @@ const textNodes = [
         text: `"Ughhh, I didn't want to have to do this man, everyone, GET 'EM"`,
         options: [
             {
-                text:`Continue`,
+                text: `Continue`,
                 nextText: 18,
                 funcRun: `mentorPortrait`
             }
@@ -400,7 +400,7 @@ const textNodes = [
         text: `"STOP RIGHT THERE YOU... RAPSCALLIONS?... ruffians?... YES, RUFFIANS!" An old goblin runs at your newfound aggressors and beats them with a newspaper.`,
         options: [
             {
-                text:`Continue`,
+                text: `Continue`,
                 nextText: 19,
                 funcRun: `clanPortrait`
             }
@@ -411,7 +411,7 @@ const textNodes = [
         text: `"ACK! STOP YOU OLD MAN! THAT HURTS! BY THE AUTHORITY OF THE ARCHBOSS I ORDER YOU TO STOP! ARGH! IT'S TOO MUCH... RETREAT!"`,
         options: [
             {
-                text:`Continue`,
+                text: `Continue`,
                 nextText: 20,
                 funcRun: `resistPortrait`
             }
@@ -419,18 +419,18 @@ const textNodes = [
     },
     {
         id: 20,
-        text:`"Hey kid, you did pretty good out there too! Why don't you come and join us at our base camp nearby?"`,
+        text: `"Hey kid, you did pretty good out there too! Why don't you come and join us at our base camp nearby?"`,
         options: [
             {
-                text:`Continue`,
-                nextText:21,
-                funcRun: `mentorPortrait` 
+                text: `Continue`,
+                nextText: 21,
+                funcRun: `mentorPortrait`
             }
         ]
     },
     {
         id: 21,
-        text:`"Remember what I said young one, 'Never cheat'!"`,
+        text: `"Remember what I said young one, 'Never cheat'!"`,
         options: [
             {
                 text: `Follow your new resistance friends to their base`,
@@ -441,7 +441,7 @@ const textNodes = [
     },
     {
         id: 22,
-        text:`You arrive at the small town of Greenrock. Here you will find a small shop and tavern, where you may be able to find some quests.`,
+        text: `You arrive at the small town of Greenrock. Here you will find a small shop and tavern, where you may be able to find some quests.`,
         options: [
             {
                 text: `Enter and explore the town`,
@@ -463,7 +463,14 @@ const textNodes = [
     },
     {
         id: 24,
-        text: `Y`
+        text: `You find yourself standing in the tavern. To your right you see an... odd-looking resistance member. To your left is the bar itself. What do you wish to do?`,
+        options: [
+            {
+                text:`Speak to the resistance member`,
+                nextText: 25,
+                funcRun: ``
+            }
+        ]
     }
 
 ]
@@ -482,13 +489,56 @@ let backgroundScene = document.getElementById(`body`);
 function sceneChange(newScene) {
     backgroundScene.style.background = newScene;
     backgroundScene.style.backgroundSize = `cover`;
-    backgroundScene.style.backgroundRepeat = `no-repeat` 
+    backgroundScene.style.backgroundRepeat = `no-repeat`
     backgroundScene.style.backgroundPosition = `center`;
 }
 
 let response = `Fortnite is an online video game and game platform developed by Epic Games and released in 2017. It is available in seven distinct game mode versions that otherwise share the same general gameplay and game engine: Fortnite Battle Royale, a battle royale game in which up to 100 players fight to be the last person standing; Fortnite: Save the World, a cooperative hybrid tower defense-shooter and survival game in which up to four players fight off zombie-like creatures and defend objects with traps and fortifications they can build; Fortnite Creative, in which players are given complete freedom to create worlds and battle arenas; Lego Fortnite, an open world game collection divided between survival game Lego Fortnite Odyssey and social game Lego Fortnite Brick Life; Rocket Racing, a racing game; Fortnite Festival, a rhythm game; and Fortnite Ballistic, a tactical first-person shooter currently in early access. All game modes except Save the World are free-to-play.`;
 
 
+// Flip A Coin JS
+let heads = 0;
+let tails = 0;
+let coin = document.querySelector(".coins");
+let flipBtn = document.querySelector("#flip-button");
+let cheatBtn = document.querySelector("#cheat-button");
+
+flipBtn.addEventListener("click", () => {
+    let i = Math.floor(Math.random() * 2);
+    coin.style.animation = "none";
+    if (i) {
+        setTimeout(function () {
+            coin.style.animation = "spin-heads 3s forwards";
+        }, 100);
+        heads++;
+    }
+    else{
+        setTimeout(function() {
+            coin.style.animation = "spin-tails 3s forwards";
+        }, 100);
+        tails++;
+    }
+    setTimeout(updateStats, 3000);
+    disableButton();
+});
+
+function updateStats() {
+    document.querySelector("#heads-count").textContent = `Heads: ${heads}`;
+    document.querySelector("#tails-count").textContent = `Tails: ${tails}`;
+}
+
+function disableButton() {
+    flipBtn.disabled = true;
+    setTimeout(function(){
+        flipBtn.disabled = false;
+    },3000);
+}
+
+cheatBtn.addEventListener("click",() => {
+    coin.style.animation = "none";
+    tails = 0;
+    updateStats();
+})
 
 // progress bar
 var i = 0;
@@ -516,21 +566,21 @@ function openBackpack(evt, backpackName) {
     var i, tabcontent, tablinks;
     tabcontent = document.getElementsByClassName("tabcontent");
     for (i = 0; i < tabcontent.length; i++) {
-      tabcontent[i].style.display = "none";
+        tabcontent[i].style.display = "none";
     }
     tablinks = document.getElementsByClassName("tablinks");
     for (i = 0; i < tablinks.length; i++) {
-      tablinks[i].className = tablinks[i].className.replace(" active", "");
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
     }
     document.getElementById(backpackName).style.display = "block";
     evt.currentTarget.className += " active";
-  }
-  
-  // Get the element with id="defaultOpen" and click on it
+}
+
+// Get the element with id="defaultOpen" and click on it
 //   document.getElementById("defaultOpen").click();
 
 function preLoad() {
-    
+
     setTimeout(startGame, 8000);
 }
 
@@ -556,43 +606,43 @@ window.onload = diceProgressBar;
 // Roll Dice System(combat system)
 function rollSingleDie() {
     return Math.floor(Math.random() * 6) + 1;
-  }
-  
-  function rollDice() {
+}
+
+function rollDice() {
     const die1 = document.getElementById("die1");
     const die2 = document.getElementById("die2");
     const disSum = document.getElementById("sum");
-  
+
     const result1 = rollSingleDie();
     const result2 = rollSingleDie();
-  
+
     const sum = result1 + result2;
-  
+
     die1.innerHTML = result1;
     die2.innerHTML = result2;
     disSum.innerHTML = "Sum: " + sum;
     // add animation class
-  
+
     die1.classList.add("roll");
     die2.classList.add("roll");
-  
+
     setTimeout(() => {
-      die1.classList.remove("roll");
-      die2.classList.remove("roll");
+        die1.classList.remove("roll");
+        die2.classList.remove("roll");
     }, 500);
-  
+
     // Remove animation class
     die1.classList.remove("roll");
     die2.classList.remove("roll");
-  
+
     // Trigger reflow
     void die1.offsetWidth;
     void die2.offsetWidth;
-  
+
     // Add animation class
     die1.classList.add("roll");
     die2.classList.add("roll");
-  }
+}
 
 
 // preLoad();
