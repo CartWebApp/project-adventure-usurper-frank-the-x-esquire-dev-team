@@ -1,5 +1,10 @@
 // Character Data
-var player = {};
+var player = {
+    talent: 0,
+    spy: 0,
+    cheater: 0,
+    quests: 0,
+};
 
 // States
 let talent = {}
@@ -52,6 +57,7 @@ const mentor = "url(images/characters/goblinmentor.png)";
 const goblinResist = `url(images/characters/goblin2.png)`;
 const goblinClan = `url(images/characters/goblin3.png)`
 const sans = "url(images/characters/goblinSans.png)";
+const archie = `url(images/characters/ARCHBOSS.png)`;
 
 // Background Images
 
@@ -106,6 +112,8 @@ let functions = {
     clanPortrait: function () { characterChange(goblinClan) },
     resistPortrait: function () { characterChange(goblinResist) },
     mentorPortrait: function () { characterChange(mentor) },
+    archiePortrait: function () { displayVisiblity(`dialogCharacter`); characterChange(archie); },
+    clanSpySpeak: function () { displayVisiblity(`dialogCharacter`); characterChange(sans); },
     clanSpeak: function () { characterChange(goblinClan); speakerSwap() },
     resistSpeak: function () { characterChange(goblinResist); speakerSwap() },
     mentorSpeak: function () { characterChange(mentor); speakerSwap() },
@@ -129,9 +137,6 @@ function startGame() {
     displayVisiblity(`diceSystem`)
     displayVisiblity(`dialogCharacter`)
     displayVisiblity(`skillCheck`)
-    spy = {}
-    talent = {}
-    cheater = {}
     showTextNode(1)
     typeWriterClear()
 }
@@ -466,9 +471,33 @@ const textNodes = [
         text: `You find yourself standing in the tavern. To your right you see an... odd-looking resistance member. To your left is the bar itself. What do you wish to do?`,
         options: [
             {
-                text:`Speak to the resistance member`,
+                text: `Speak to the resistance member`,
                 nextText: 25,
-                funcRun: ``
+                funcRun: `clanSpySpeak`
+            },
+            {
+                text: `Speak to the tavernkeep`,
+                nextText: 26,
+                funcRun: `archiePortrait`
+            }
+        ]
+    },
+    {
+        id: 25,
+        text: `"Psssst, c'mere, I got some orders from the A - R - C - B - O - S - S, if you know what I mean . . ."`,
+        options: [
+            {
+                text: ``,
+                nextText: 0,
+            }
+        ]
+    },
+    {
+        id: 26,
+        text: `Welcome to Archie's Tavern! You must be the new guy that the squad leader was talkin about. He told me to give you these jobs. Take your pick!`,
+        options: [
+            {
+                text: ``,
             }
         ]
     }
@@ -512,8 +541,8 @@ flipBtn.addEventListener("click", () => {
         }, 100);
         heads++;
     }
-    else{
-        setTimeout(function() {
+    else {
+        setTimeout(function () {
             coin.style.animation = "spin-tails 3s forwards";
         }, 100);
         tails++;
@@ -529,12 +558,12 @@ function updateStats() {
 
 function disableButton() {
     flipBtn.disabled = true;
-    setTimeout(function(){
+    setTimeout(function () {
         flipBtn.disabled = false;
-    },3000);
+    }, 3000);
 }
 
-cheatBtn.addEventListener("click",() => {
+cheatBtn.addEventListener("click", () => {
     coin.style.animation = "none";
     tails = 0;
     updateStats();
@@ -643,6 +672,125 @@ function rollDice() {
     die1.classList.add("roll");
     die2.classList.add("roll");
 }
+
+
+// Main Combat System(its mess and might need to change it later with the dice system)
+// Jack(Do this cra* at home)
+// const playerHeartsElement = document.getElementById('player-hearts');
+// const enemyHeartsElement = document.getElementById('enemy-hearts');
+// const combatLogElement = document.getElementById('combat-log');
+// const rollButton = document.getElementById('roll-btn');
+// const cheatButton = document.getElementById('cheat-btn');
+// const playerDice = document.getElementById('player-dice');
+// const enemyDice = document.getElementById('enemy-dice');
+// const gameOverElement = document.getElementById('game-over');
+// const gameOverMessage = document.getElementById('game-over-message');
+
+// let playerHearts = 3;
+// let enemyHearts = 3;
+
+// function logMessage(message) {
+//     const paragraph = document.createElement('p');
+//     paragraph.textContent = message;
+//     combatLogElement.appendChild(paragraph);
+//     combatLogElement.scrollTop = combatLogElement.scrollHeight;
+// }
+
+// function rollDice() {
+//     animateDice();
+
+//     setTimeout(() => {
+//         const playerRoll = Math.floor(Math.random() * 6) + 1;
+//         const enemyRoll = Math.floor(Math.random() * 6) + 1;
+
+//         playerDice.textContent = `🎲 ${playerRoll}`;
+//         enemyDice.textContent = `🎲 ${enemyRoll}`;
+
+//         if (playerRoll > enemyRoll) {
+//             enemyHearts--;
+//             logMessage(`You win the roll! Enemy loses 1 heart.`);
+//         } else if (enemyRoll > playerRoll) {
+//             playerHearts--;
+//             logMessage(`Enemy wins the roll! You lose 1 heart.`);
+//         } else {
+//             logMessage(`It's a tie! No hearts lost.`);
+//         }
+
+//         updateHearts();
+//         checkGameOver();
+//     }, 500);
+// }
+
+// function cheat() {
+//     const playerRoll = prompt("Enter your desired dice roll (1-6):");
+//     const enemyRoll = Math.floor(Math.random() * 6) + 1;
+
+//     animateDice();
+
+//     setTimeout(() => {
+//         playerDice.textContent = `🎲 ${playerRoll}`;
+//         enemyDice.textContent = `🎲 ${enemyRoll}`;
+
+//         if (playerRoll > enemyRoll) {
+//             enemyHearts--;
+//             logMessage(`You cheated and won the roll! Enemy loses 1 heart.`);
+//         } else if (enemyRoll > playerRoll) {
+//             playerHearts--;
+//             logMessage(`Enemy wins the roll! You lose 1 heart.`);
+//         } else {
+//             logMessage(`It's a tie! No hearts lost.`);
+//         }
+
+//         updateHearts();
+//         checkGameOver();
+//     }, 500);
+// }
+
+// function animateDice() {
+//     playerDice.style.animation = 'rollDice 0.5s ease-in-out';
+//     enemyDice.style.animation = 'rollDice 0.5s ease-in-out';
+
+//     setTimeout(() => {
+//         playerDice.style.animation = '';
+//         enemyDice.style.animation = '';
+//     }, 500);
+// }
+
+// function updateHearts() {
+//     playerHeartsElement.textContent = '❤️'.repeat(playerHearts);
+//     enemyHeartsElement.textContent = '❤️'.repeat(enemyHearts);
+// }
+
+// function checkGameOver() {
+//     if (playerHearts === 0) {
+//         showGameOver('You Lose! 💀');
+//     }
+
+//     if (enemyHearts === 0) {
+//         showGameOver('You Win! 🎉');
+//     }
+// }
+
+// function showGameOver(message) {
+//     gameOverMessage.textContent = message;
+//     gameOverElement.style.display = 'block';
+//     rollButton.disabled = true;
+//     cheatButton.disabled = true;
+// }
+
+// function restartGame() {
+//     playerHearts = 3;
+//     enemyHearts = 3;
+//     updateHearts();
+//     combatLogElement.innerHTML = '';
+//     gameOverElement.style.display = 'none';
+//     rollButton.disabled = false;
+//     cheatButton.disabled = false;
+// }
+
+// rollButton.addEventListener('click', rollDice);
+// cheatButton.addEventListener('click', cheat);
+
 
 
 // preLoad();
