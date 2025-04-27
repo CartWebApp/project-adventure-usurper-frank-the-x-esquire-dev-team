@@ -819,19 +819,33 @@ function rollDice() {
 // Information review system
 const descriptions = [
   {
-    title: "Introduction",
+    title: "Welcome",
     content:
-      "Welcome to the world of exploration and adventure. Unlock hidden secrets along your journey.",
+      "Welcome to the Risk and Ruin. <span style='color: #4CAF50;'>Unlock hidden secrets</span> along your journey.",
   },
   {
-    title: "Discovery",
+    title: "Cheat",
     content:
-      "Discover ancient relics and uncover powerful treasures that shape your destiny.",
+      "During combat, you can decide to cheat or not cheat to win the game, but <span style='color: #FF5733;'>not</span> to cheat might cause an special result!",
   },
   {
     title: "Alliances",
     content:
-      "Form alliances, battle powerful foes, and pave your path to victory.",
+      "Form <span style='color: #3498DB;'>alliances</span>, battle <span style='color: #E74C3C;'>powerful foes</span>, and pave your path to victory.",
+  },
+  {
+    title: "Dice",
+    content:
+      "Dice, have 6 face, in a combat you might win by the <span style='color:rgb(25, 221, 67);'>lowest</span> number, or  <span style='color:rgb(216, 10, 10);'>highest </span> number to win",
+  },
+  {
+    title: "Coin",
+    content: "Use your coin to flip to win.",
+  },
+  {
+    title: "Speed Up",
+    content:
+      "OnClick the <span style='color: #E74C3C;'> textbox</span> multiple times can speed up the typewriter effect!",
   },
 ];
 
@@ -854,7 +868,7 @@ function updateDescription() {
   const descriptionText = document.getElementById("description-text");
 
   descriptionTitle.textContent = descriptions[currentIndex].title;
-  descriptionText.textContent = descriptions[currentIndex].content;
+  descriptionText.innerHTML = descriptions[currentIndex].content;
 }
 
 function prevDescription() {
@@ -870,6 +884,5 @@ function nextDescription() {
     updateDescription();
   }
 }
-
 // preLoad();
 startGame();
