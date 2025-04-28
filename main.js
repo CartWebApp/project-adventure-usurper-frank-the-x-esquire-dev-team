@@ -208,9 +208,15 @@ function runFunc(option) {
 function selectOption(option) {
   const nextTextNodeId = option.nextText;
   runFunc(option);
-  spy = option.setSpy;
-  talent = option.setTalent;
-  cheater = option.setCheater;
+  if (option.setSpy == true){
+    spy = option.setSpy
+  }
+  if (option.setTalent == true){
+    talent = option.setTalen
+  }
+  if (option.setCheater == true){
+    cheater = option.setCheater
+  }
   console.log(talent);
   showTextNode(nextTextNodeId);
   typeWriterClear();
@@ -502,7 +508,7 @@ const textNodes = [
   },
   {
     id: 24,
-    text: `You find yourself standing in the tavern. To your right you see an... odd-looking resistance member. To your left is the bar itself. What do you wish to do?`,
+    text: `You find yourself standing in the tavern. To your right you see an odd-looking resistance member. To your left is the bar itself. What do you wish to do?`,
     options: [
       {
         text: `Speak to the resistance member`,
@@ -518,11 +524,22 @@ const textNodes = [
   },
   {
     id: 25,
-    text: `"Psssst, c'mere, I got some orders from the A - R - C - B - O - S - S, if you know what I mean . . ."`,
+    text: `"Psssst, c'mere, have we met before? Nevermind, it doesn't matter, I got some orders from the A - R - C - B - O - S - S, if you know what I mean . . ."`,
     options: [
       {
-        text: ``,
-        nextText: 0,
+        text: `Correct his spelling`,
+        nextText: 27,
+        funcRun: `speakerSwap`,
+      },
+      {
+        text: `Nod in understanding`,
+        nextText: 28,
+        funcRun: `pass`
+      },
+      {
+        text: `Deny knowing what he means`,
+        nextText: 30,
+        funcRun: `speakerSwap`,
       },
     ],
   },
@@ -535,6 +552,172 @@ const textNodes = [
       },
     ],
   },
+  {
+    id: 27,
+    text: `You do know Archboss is spelt with an 'H', right?`,
+    options: [
+      {
+        text: `Continue`,
+        nextText: 28,
+        funcRun: `speakerSwap`,
+      }
+    ]
+  },
+  {
+    id: 28,
+    text: `"So you DO know what I mean, good."`,
+    options: [
+      {
+        text: `Continue`,
+        nextText: 29,
+        setSpy: true,
+        funcRun: `pass`
+      }
+    ]
+  },
+  {
+    id: 29,
+    text: `"Anyways, the Archboss is preparing a counterattack against the resistance's new plan, and he needs someone like you to tell us what the perfect time to strike is. That's the plan, we expect to hear from you soon."`,
+    options: [
+      {
+        text: `Continue`,
+        nextText: 24,
+        funcRun: `displayVisChar`
+      }
+    ]
+  } ,
+  {
+    id: 30, 
+    text: `"Then SCRAM!!!"`,
+    options: [
+      {
+        text: `Continue`,
+        nextText: 24,
+        funcRun: `displayVisChar`
+      }
+    ]
+  },
+  {
+    id: 0, 
+    text: `""`,
+    options: [
+      {
+        text: ``,
+        nextText: 0,
+        funcRun: ``
+      }
+    ]
+  },
+  {
+    id: 0, 
+    text: `""`,
+    options: [
+      {
+        text: ``,
+        nextText: 0,
+        funcRun: ``
+      }
+    ]
+  },
+  {
+    id: 0, 
+    text: `""`,
+    options: [
+      {
+        text: ``,
+        nextText: 0,
+        funcRun: ``
+      }
+    ]
+  },
+  {
+    id: 0, 
+    text: `""`,
+    options: [
+      {
+        text: ``,
+        nextText: 0,
+        funcRun: ``
+      }
+    ]
+  },
+  {
+    id: 0, 
+    text: `""`,
+    options: [
+      {
+        text: ``,
+        nextText: 0,
+        funcRun: ``
+      }
+    ]
+  },
+  {
+    id: 0, 
+    text: `""`,
+    options: [
+      {
+        text: ``,
+        nextText: 0,
+        funcRun: ``
+      }
+    ]
+  },
+  {
+    id: 0, 
+    text: `""`,
+    options: [
+      {
+        text: ``,
+        nextText: 0,
+        funcRun: ``
+      }
+    ]
+  },
+  {
+    id: 0, 
+    text: `""`,
+    options: [
+      {
+        text: ``,
+        nextText: 0,
+        funcRun: ``
+      }
+    ]
+  },
+  {
+    id: 0, 
+    text: `""`,
+    options: [
+      {
+        text: ``,
+        nextText: 0,
+        funcRun: ``
+      }
+    ]
+  },
+  {
+    id: 0, 
+    text: `""`,
+    options: [
+      {
+        text: ``,
+        nextText: 0,
+        funcRun: ``
+      }
+    ]
+  },
+  {
+    id: 0, 
+    text: `""`,
+    options: [
+      {
+        text: ``,
+        nextText: 0,
+        funcRun: ``
+      }
+    ]
+  }
 ];
 
 function conversationCont(reply) {
@@ -821,7 +1004,7 @@ const descriptions = [
   {
     title: "Welcome",
     content:
-      "Welcome to the Risk and Ruin. <span style='color: #4CAF50;'>Unlock hidden secrets</span> along your journey.",
+      "Welcome to the Risk and Ruin. <span style='color: #FFD700;'>Unlock hidden secrets</span> along your journey.",
   },
   {
     title: "Cheat",
@@ -884,5 +1067,5 @@ function nextDescription() {
     updateDescription();
   }
 }
-// preLoad();
-startGame();
+preLoad();
+// startGame();
