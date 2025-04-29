@@ -13,9 +13,10 @@
 </head>
 
 <body class="body" id="body">
+    <button class="startButton" onclick="preLoad()">Start Game</button>
 
     <main class="main">
-        <div class="dialog" id="active">
+        <div class="dialog" id="inactive">
             <div class="dialogCharacter" id="active"><img class="mainCharacter" id="idle"
                     src="/images/characters/goblin.png" alt="">
                 <div class="npc" id="speaking" alt=""></div>
@@ -25,14 +26,14 @@
             </section>
         </div>
         <!-- option selector -->
-        <div class="option">
+        <div class="option" id="inactive">
             <button class="button">1</button>
             <button class="button">2</button>
             <button class="button">3</button>
             <button class="button">4</button>
         </div>
         <!-- skill/cheat -->
-        <div class="skillCheck">
+        <div class="skillCheck" id="inactive">
             <button id="button" onclick="on()">skill</button>
         </div>
         <div id="overlay" onclick="off()">
@@ -63,7 +64,7 @@
 
 
         <!-- Flip A Coin system -->
-        <div class="box">
+        <div class="box" id="inactive">
             <div class="stats">
                 <p id="heads-count">Heads: 0</p>
                 <p id="tails-count">Tails: 0</p>
@@ -97,8 +98,8 @@
     <button id="wontUseFeature" onclick="move()">ProgressBar (loading page would remove this button)</button> -->
 
     </main>
-    <div class="loading" id="active"></div>
-    <div class="dice-container">
+    <div class="loading" id="inactive"></div>
+    <div class="dice-container" id="inactive">
         <div class="dice">⚀</div>
         <div class="dice">⚁</div>
         <div class="dice">⚂</div>
@@ -108,7 +109,7 @@
     </div>
 
     <!-- Dice Combat system -->
-    <section class="diceSystem">
+    <section class="diceSystem" id="inactive">
         <h1 id="sum">1</h1>
         <div class="dice" id="dice">
             <div class="die" id="die1">

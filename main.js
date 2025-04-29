@@ -68,6 +68,7 @@ const obsidianbg = `url(images/environment/obsidiancrag.jpg)`;
 const greenrockbg = `url(images/environment/greenrock.jpg)`;
 const charcoalbg = `url(images/environment/charcoalquarry.jpg)`;
 const tavernbg = `url(images/environment/tavern.jpg)`;
+const mainbg = `url(images/hud/Home-screen.png)`;
 
 // Character Dialog image changer
 
@@ -168,13 +169,9 @@ let functions = {
 const optionButtonsElement = document.getElementsByClassName(`option`)[0];
 
 function startGame() {
-  displayVisiblity(`loading`);
   sceneChange(epiloguebg);
+  displayVisiblity(`loading`)
   displayVisiblity(`dice-container`);
-  displayVisiblity(`box`);
-  displayVisiblity(`diceSystem`);
-  displayVisiblity(`dialogCharacter`);
-  displayVisiblity(`skillCheck`);
   showTextNode(1);
   typeWriterClear();
 }
@@ -820,6 +817,13 @@ function openBackpack(evt, backpackName) {
 //   document.getElementById("defaultOpen").click();
 
 function preLoad() {
+  diceProgressBar();
+  displayVisiblity(`option`)
+  displayVisiblity(`dialog`)
+  displayVisiblity(`dialogCharacter`)
+  displayVisiblity(`startButton`)
+  displayVisiblity(`dice-container`)
+  displayVisiblity(`loading`)
   setTimeout(startGame, 8000);
 }
 
@@ -839,7 +843,7 @@ function diceProgressBar() {
 }
 
 // Start the dice progress bar when the page loads
-window.onload = diceProgressBar;
+// window.onload = diceProgressBar;
 
 // Roll Dice System(combat system)
 function rollSingleDie() {
@@ -1067,5 +1071,7 @@ function nextDescription() {
     updateDescription();
   }
 }
-preLoad();
+
+
+// preLoad();
 // startGame();
