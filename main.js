@@ -734,7 +734,7 @@ function sceneChange(newScene) {
   backgroundScene.style.backgroundPosition = `center`;
 }
 
-let response = `Fortnite is an online video game and game platform developed by Epic Games and released in 2017. It is available in seven distinct game mode versions that otherwise share the same general gameplay and game engine: Fortnite Battle Royale, a battle royale game in which up to 100 players fight to be the last person standing; Fortnite: Save the World, a cooperative hybrid tower defense-shooter and survival game in which up to four players fight off zombie-like creatures and defend objects with traps and fortifications they can build; Fortnite Creative, in which players are given complete freedom to create worlds and battle arenas; Lego Fortnite, an open world game collection divided between survival game Lego Fortnite Odyssey and social game Lego Fortnite Brick Life; Rocket Racing, a racing game; Fortnite Festival, a rhythm game; and Fortnite Ballistic, a tactical first-person shooter currently in early access. All game modes except Save the World are free-to-play.`;
+
 
 // Flip A Coin JS
 let heads = 0;
@@ -1011,12 +1011,12 @@ const descriptions = [
   {
     title: "Welcome",
     content:
-      "Welcome to the Risk and Ruin. <span style='color: #FFD700;'>Unlock hidden secrets</span> along your journey.",
+      "Welcome to Risk and Ruin. A story game about goblins and their gambling issues. <span style='color: #FFD700;'>Unlock hidden secrets</span> along your journey.",
   },
   {
     title: "Cheat",
     content:
-      "During combat, you can decide to cheat or not cheat to win the game, but <span style='color: #FF5733;'>not</span> to cheat might cause an special result!",
+      "During combat, you can decide to cheat or to win the game, but <span style='color: #FF5733;'>I HATE</span> CHEATERS!",
   },
   {
     title: "Alliances",
@@ -1030,12 +1030,12 @@ const descriptions = [
   },
   {
     title: "Coin",
-    content: "Use your coin to flip to win.",
+    content: "Decide the fates of both you and your enemy by the flip of a coin.",
   },
   {
     title: "Speed Up",
     content:
-      "OnClick the <span style='color: #E74C3C;'> textbox</span> multiple times can speed up the typewriter effect!",
+      "Clicking the <span style='color: #E74C3C;'> textbox</span> multiple times can speed up the typewriter effect! This is a <span style='color: #FF5733;'>FEATURE</span> not a <span style='color: #FF5733;'>BUG</span>!",
   },
 ];
 
