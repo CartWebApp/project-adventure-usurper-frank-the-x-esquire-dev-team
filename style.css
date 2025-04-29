@@ -10,8 +10,14 @@ html {
 
 .startButton {
   position: absolute;
-  top: 25%;
-  left: 70%;
+  background-color: rgb(247, 203, 92);
+  color: var(--black);
+  top: 15%;
+  left: 80%;
+  width: 350px;
+  height: 130px;
+  font-size: 30px;
+  border-radius: 10px;
 }
 
 #body {
@@ -287,7 +293,7 @@ button {
 }
 
 .dice {
-  font-size: 50px;
+  font-size: 70px;
   /* Adjust dice size */
   color: #404040;
   /* Dark grey as the starting color */

@@ -541,10 +541,12 @@ const textNodes = [
   },
   {
     id: 26,
-    text: `Welcome to Archie's Tavern! You must be the new guy that the squad leader was talkin about. He told me to give you these jobs. Take your pick!`,
+    text: `Welcome to Archie's Tavern! You must be the new guy that the squad leader was talkin about. He told me to give you these jobs. Good luck!`,
     options: [
       {
-        text: ``,
+        text: `Accept the quests`,
+        nextText: 31,
+        funcRun: `displayVisChar`,
       },
     ],
   },
@@ -594,7 +596,7 @@ const textNodes = [
     ]
   },
   {
-    id: 0, 
+    id: 31, 
     text: `""`,
     options: [
       {
@@ -605,7 +607,7 @@ const textNodes = [
     ]
   },
   {
-    id: 0, 
+    id: 32, 
     text: `""`,
     options: [
       {
@@ -616,7 +618,7 @@ const textNodes = [
     ]
   },
   {
-    id: 0, 
+    id: 32, 
     text: `""`,
     options: [
       {
@@ -627,7 +629,7 @@ const textNodes = [
     ]
   },
   {
-    id: 0, 
+    id: 33, 
     text: `""`,
     options: [
       {
@@ -638,7 +640,7 @@ const textNodes = [
     ]
   },
   {
-    id: 0, 
+    id: 34, 
     text: `""`,
     options: [
       {
@@ -649,7 +651,7 @@ const textNodes = [
     ]
   },
   {
-    id: 0, 
+    id: 35, 
     text: `""`,
     options: [
       {
@@ -660,7 +662,7 @@ const textNodes = [
     ]
   },
   {
-    id: 0, 
+    id: 36, 
     text: `""`,
     options: [
       {
@@ -671,7 +673,7 @@ const textNodes = [
     ]
   },
   {
-    id: 0, 
+    id: 37, 
     text: `""`,
     options: [
       {
@@ -682,7 +684,7 @@ const textNodes = [
     ]
   },
   {
-    id: 0, 
+    id: 38, 
     text: `""`,
     options: [
       {
@@ -693,7 +695,7 @@ const textNodes = [
     ]
   },
   {
-    id: 0, 
+    id: 39, 
     text: `""`,
     options: [
       {
@@ -704,7 +706,7 @@ const textNodes = [
     ]
   },
   {
-    id: 0, 
+    id: 40, 
     text: `""`,
     options: [
       {
