@@ -508,7 +508,7 @@ button {
 }
 
 /* information review system */
-#book-icon {
+.info {
     position: fixed;
     top: 15px;
     right: 15px;
@@ -525,7 +525,7 @@ button {
     transition: transform 0.3s ease;
 }
 
-#book-icon:hover {
+.info:hover {
     transform: scale(1.1);
     background-color: #668cff;
 }

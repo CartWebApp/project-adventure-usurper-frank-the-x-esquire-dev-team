@@ -169,7 +169,6 @@ let functions = {
 const optionButtonsElement = document.getElementsByClassName(`option`)[0];
 
 function startGame() {
-  sceneChange(epiloguebg);
   displayVisiblity(`loading`)
   displayVisiblity(`dice-container`);
   showTextNode(1);
@@ -818,6 +817,8 @@ function openBackpack(evt, backpackName) {
 
 function preLoad() {
   diceProgressBar();
+  sceneChange(epiloguebg);
+  displayVisiblity(`info`)
   displayVisiblity(`option`)
   displayVisiblity(`dialog`)
   displayVisiblity(`dialogCharacter`)
