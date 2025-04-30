@@ -535,13 +535,13 @@ const textNodes = [
       {
         text: `Deny knowing what he means`,
         nextText: 30,
-        funcRun: `speakerSwap`,
+        funcRun: `pass`,
       },
     ],
   },
   {
     id: 26,
-    text: `Welcome to Archie's Tavern! You must be the new guy that the squad leader was talkin about. He told me to give you these jobs. Good luck!`,
+    text: `Welcome to Archie's Tavern! You must be the new guy that the squad leader was talkin about. He needs you to prove your alligance to us by pickpocketing some goodies. Good luck!`,
     options: [
       {
         text: `Accept the quests`,
@@ -596,106 +596,132 @@ const textNodes = [
     ]
   },
   {
-    id: 31, 
-    text: `""`,
+    id: 31,
+    text: `You look around the tavern, in the corner you see a familiar face. The hinges of the front door also seem to be exceptionally weak.`,
     options: [
       {
-        text: ``,
-        nextText: 0,
-        funcRun: ``
-      }
-    ]
+        text: `Go outside`,
+        nextText: 32,
+        funcRun: `bgSwapGreen`,
+      },
+      {
+        text: `Go speak to the familiar goblin`,
+        nextText: 33,
+        funcRun: `mentorPortrait`,
+      },
+    ],
   },
   {
     id: 32, 
-    text: `""`,
+    text: `You stand in front of the tavern exit`,
     options: [
       {
-        text: ``,
+        text: `Gently open door and walk out`,
         nextText: 0,
-        funcRun: ``
-      }
-    ]
-  },
-  {
-    id: 32, 
-    text: `""`,
-    options: [
+        funcRun: `speakerSwap`
+      },
       {
-        text: ``,
+        text: `Rudely kick out the door`,
         nextText: 0,
-        funcRun: ``
+        funcRun: `archiePortrait`
       }
     ]
   },
   {
     id: 33, 
-    text: `""`,
+    text: `You see your buddy, Old Crankle, but it seems he's had too much to drink.`,
     options: [
       {
-        text: ``,
-        nextText: 0,
-        funcRun: ``
+        text: `Run his pockets`,
+        nextText: 34,
+        funcRun: `speakerSwap`,
+      },
+      {
+        text: `Wake him up`,
+        nextText: 35,
+        funcRun: `displayVisChar`,
       }
     ]
   },
   {
     id: 34, 
-    text: `""`,
+    text: `You take a small set of heavily worn dice, and a crudely carved wooden figurine of ... Old Crankle?`,
     options: [
       {
-        text: ``,
-        nextText: 0,
-        funcRun: ``
+        text: `Continue`,
+        nextText: 36,
+        funcRun: `displayVisChar`
       }
     ]
   },
   {
     id: 35, 
-    text: `""`,
+    text: `Old Crankle mumble and awake, then it suddenly turn its face, rudely shouting to you. Old Crankle shout: "You piece of !@#$%#@##, What the F@#! are you doing to my #$%$#^&%^^*&!$@%#^ POCKET!!!" `,
     options: [
       {
-        text: ``,
-        nextText: 0,
-        funcRun: ``
+        text: `I-I-I only wanted to wake you up, I swear!`,
+        nextText: 37,
+        funcRun: `pass`
       }
     ]
   },
   {
     id: 36, 
-    text: `""`,
+    text: `As you slowly back away, Old Crankles eyes shoot open."Nice going there young one! I knew you had it in you!" He then proceeds to collapse back on to the table.`,
     options: [
       {
-        text: ``,
-        nextText: 0,
-        funcRun: ``
+        text: `Continue`,
+        nextText: 38,
+        funcRun: `pass`
       }
     ]
   },
   {
     id: 37, 
-    text: `""`,
+    text: `"Old Crankle: Yayaya~ I just want to wake you up. WHAT THE F@#%^ DO YOU THINK I WOULD BELIEVE YOU? YOU F$%I@^&#@# !@#^&@ #$%$%%^@#! "`,
     options: [
       {
-        text: ``,
-        nextText: 0,
-        funcRun: ``
+        text: `Ran out of the tavern and never get back`,
+        nextText: 39,
+        funcRun: `displayVisChar`
       }
     ]
   },
   {
     id: 38, 
-    text: `""`,
+    text: `That is your first experience to rob others pocket, it's exhilarating, inside your heart, you'd decide to...""`,
     options: [
       {
-        text: ``,
-        nextText: 0,
-        funcRun: ``
+        text: `I should stop doing this`,
+        nextText: 40,
+        funcRun: `pass`
       }
     ]
   },
   {
     id: 39, 
+    text: `You smash down the tavern door as you bolt outside. You hear Archie yell,"YOU NEED TO PAY FOR THAT YOU KNOW!"`,
+    options: [
+      {
+        text: `Continue`,
+        nextText: 41,
+        funcRun: `bgSwapGreen`
+      }
+    ]
+  },
+  {
+    id: 40, 
+    text: `Although you thinking in your mind, stoling is illegal, but you can't stop your (idk)`,
+    options: [
+      {
+        text: `Target next `,
+        nextText: 0,
+        funcRun: ``
+      }
+    ]
+  },
+  {
+    id: 40, 
     text: `""`,
     options: [
       {
@@ -704,8 +730,57 @@ const textNodes = [
         funcRun: ``
       }
     ]
-  },
-  {
+  },{
+    id: 40, 
+    text: `""`,
+    options: [
+      {
+        text: ``,
+        nextText: 0,
+        funcRun: ``
+      }
+    ]
+  },{
+    id: 40, 
+    text: `""`,
+    options: [
+      {
+        text: ``,
+        nextText: 0,
+        funcRun: ``
+      }
+    ]
+  },{
+    id: 40, 
+    text: `""`,
+    options: [
+      {
+        text: ``,
+        nextText: 0,
+        funcRun: ``
+      }
+    ]
+  },{
+    id: 40, 
+    text: `""`,
+    options: [
+      {
+        text: ``,
+        nextText: 0,
+        funcRun: ``
+      }
+    ]
+  },{
+    id: 40, 
+    text: `""`,
+    options: [
+      {
+        text: ``,
+        nextText: 0,
+        funcRun: ``
+      }
+    ]
+  },{
     id: 40, 
     text: `""`,
     options: [
@@ -827,7 +902,7 @@ function preLoad() {
   displayVisiblity(`startButton`)
   displayVisiblity(`dice-container`)
   displayVisiblity(`loading`)
-  setTimeout(startGame, 8000);
+  setTimeout(startGame, 5);
 }
 
 //   Dice Progress Bar JS (written by copilot)
