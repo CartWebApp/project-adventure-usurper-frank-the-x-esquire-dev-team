@@ -902,7 +902,7 @@ function preLoad() {
   displayVisiblity(`startButton`)
   displayVisiblity(`dice-container`)
   displayVisiblity(`loading`)
-  setTimeout(startGame, 5);
+  setTimeout(startGame, 7000);
 }
 
 //   Dice Progress Bar JS (written by copilot)
