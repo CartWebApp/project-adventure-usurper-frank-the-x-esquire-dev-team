@@ -204,13 +204,13 @@ function runFunc(option) {
 function selectOption(option) {
   const nextTextNodeId = option.nextText;
   runFunc(option);
-  if (option.setSpy == true){
+  if (option.setSpy == true) {
     spy = option.setSpy
   }
-  if (option.setTalent == true){
+  if (option.setTalent == true) {
     talent = option.setTalen
   }
-  if (option.setCheater == true){
+  if (option.setCheater == true) {
     cheater = option.setCheater
   }
   console.log(talent);
@@ -583,9 +583,9 @@ const textNodes = [
         funcRun: `displayVisChar`
       }
     ]
-  } ,
+  },
   {
-    id: 30, 
+    id: 30,
     text: `"Then SCRAM!!!"`,
     options: [
       {
@@ -612,7 +612,7 @@ const textNodes = [
     ],
   },
   {
-    id: 32, 
+    id: 32,
     text: `You stand in front of the tavern exit`,
     options: [
       {
@@ -628,7 +628,7 @@ const textNodes = [
     ]
   },
   {
-    id: 33, 
+    id: 33,
     text: `You see your buddy, Old Crankle, but it seems he's had too much to drink.`,
     options: [
       {
@@ -644,7 +644,7 @@ const textNodes = [
     ]
   },
   {
-    id: 34, 
+    id: 34,
     text: `You take a small set of heavily worn dice, and a crudely carved wooden figurine of ... Old Crankle?`,
     options: [
       {
@@ -655,7 +655,7 @@ const textNodes = [
     ]
   },
   {
-    id: 35, 
+    id: 35,
     text: `Old Crankle mumble and awake, then it suddenly turn its face, rudely shouting to you. Old Crankle shout: "You piece of !@#$%#@##, What the F@#! are you doing to my #$%$#^&%^^*&!$@%#^ POCKET!!!" `,
     options: [
       {
@@ -666,7 +666,7 @@ const textNodes = [
     ]
   },
   {
-    id: 36, 
+    id: 36,
     text: `As you slowly back away, Old Crankles eyes shoot open."Nice going there young one! I knew you had it in you!" He then proceeds to collapse back on to the table.`,
     options: [
       {
@@ -677,7 +677,7 @@ const textNodes = [
     ]
   },
   {
-    id: 37, 
+    id: 37,
     text: `"Old Crankle: Yayaya~ I just want to wake you up. WHAT THE F@#%^ DO YOU THINK I WOULD BELIEVE YOU? YOU F$%I@^&#@# !@#^&@ #$%$%%^@#! "`,
     options: [
       {
@@ -688,8 +688,8 @@ const textNodes = [
     ]
   },
   {
-    id: 38, 
-    text: `That is your first experience to rob others pocket, it's exhilarating, inside your heart, you'd decide to...""`,
+    id: 38,
+    text: `That was your first time robbing someone, it felt... exhilarating. What do you do now?`,
     options: [
       {
         text: `I should stop doing this`,
@@ -699,19 +699,24 @@ const textNodes = [
     ]
   },
   {
-    id: 39, 
+    id: 39,
     text: `You smash down the tavern door as you bolt outside. You hear Archie yell,"YOU NEED TO PAY FOR THAT YOU KNOW!"`,
     options: [
       {
-        text: `Continue`,
+        text: `Turn back`,
         nextText: 41,
+        funcRun: `bgSwapGreen`
+      },
+      {
+        text: `Continue`,
+        nextText: 42,
         funcRun: `bgSwapGreen`
       }
     ]
   },
   {
-    id: 40, 
-    text: `Although you thinking in your mind, stoling is illegal, but you can't stop your (idk)`,
+    id: 40,
+    text: `Although you thinking in your mind, stoling is illegal, but you can't stop your hands`,
     options: [
       {
         text: `Target next `,
@@ -721,68 +726,84 @@ const textNodes = [
     ]
   },
   {
-    id: 40, 
-    text: `""`,
+    id: 41,
+    text: `At that moment, when you turn back to see does Old Crankle chasing to you. You saw the Archibald chase out and ran straight to you. In just a moment, he catches up to you. You suddenly find yourself on the floor. Archibold shouts,"Nobody who destroys my property gets to live to tell the tale!", before bringing a large cinder block down on your head.`,
     options: [
       {
-        text: ``,
+        text: `Continue`,
+        nextText: 43,
+        funcRun: `pass`
+      }
+    ]
+  }, 
+  {
+    id: 42,
+    text: `You see another familiar goblin`,
+    options: [
+      {
+        text: `Decide to rob its pocket!`,
+        nextText: 44,
+        funcRun: ``
+      },
+      {
+        text: `DECIDE TO ROB ITS POCKET!`,
+        nextText: 44,
+        funcRun: ``
+      },
+      {
+        text: `I don't think there is option for me to choose`,
+        nextText: 44,
+        funcRun: ``
+      }
+    ]
+  }, 
+  {
+    id: 43,
+    text: `YOU GOT KILLED`,
+    options: [
+      {
+        text: `Restart`,
+        nextText: 1,
+        funcRun: `bgSwapEpilogue`
+      }
+    ]
+  }, 
+  {
+    id: 44,
+    text: `So you walk to the goblin that you target to rob next, but when you try to rob his pocket, he turn its front to you`,
+    options: [
+      {
+        text: `Stole it's pocket infront of him`,
+        nextText: 45,
+        funcRun: ``
+      }
+    ]
+  }, 
+  {
+    id: 45,
+    text: `Old Crankle Ver.2: What are you doing, young gob?`,
+    options: [
+      {
+        text: `Please don't stop me robbing you!`,
         nextText: 0,
         funcRun: ``
       }
     ]
-  },{
-    id: 40, 
-    text: `""`,
+  }, 
+  {
+    id: 46,
+    text: `You don't want to lose your chance to gain the experience on robbing others, so you ignore the Old Crankle Ver.2""`,
     options: [
       {
         text: ``,
-        nextText: 0,
+        nextText: 47,
         funcRun: ``
       }
     ]
-  },{
-    id: 40, 
-    text: `""`,
-    options: [
-      {
-        text: ``,
-        nextText: 0,
-        funcRun: ``
-      }
-    ]
-  },{
-    id: 40, 
-    text: `""`,
-    options: [
-      {
-        text: ``,
-        nextText: 0,
-        funcRun: ``
-      }
-    ]
-  },{
-    id: 40, 
-    text: `""`,
-    options: [
-      {
-        text: ``,
-        nextText: 0,
-        funcRun: ``
-      }
-    ]
-  },{
-    id: 40, 
-    text: `""`,
-    options: [
-      {
-        text: ``,
-        nextText: 0,
-        funcRun: ``
-      }
-    ]
-  },{
-    id: 40, 
-    text: `""`,
+  }, 
+  {
+    id: 47,
+    text: `Old Crankle Ver.2 stard at you in that moment`,
     options: [
       {
         text: ``,
