@@ -709,7 +709,7 @@ const textNodes = [
       },
       {
         text: `Continue`,
-        nextText: 42,
+        nextText: 46,
         funcRun: `bgSwapGreen`
       }
     ]
@@ -720,8 +720,8 @@ const textNodes = [
     options: [
       {
         text: `Target next `,
-        nextText: 0,
-        funcRun: ``
+        nextText: 42,
+        funcRun: `pass`
       }
     ]
   },
@@ -743,17 +743,17 @@ const textNodes = [
       {
         text: `Decide to rob its pocket!`,
         nextText: 44,
-        funcRun: ``
+        funcRun: `pass`
       },
       {
         text: `DECIDE TO ROB ITS POCKET!`,
         nextText: 44,
-        funcRun: ``
+        funcRun: `pass`
       },
       {
         text: `I don't think there is option for me to choose`,
         nextText: 44,
-        funcRun: ``
+        funcRun: `pass`
       }
     ]
   }, 
@@ -775,35 +775,312 @@ const textNodes = [
       {
         text: `Stole it's pocket infront of him`,
         nextText: 45,
-        funcRun: ``
+        funcRun: `displayVisChar`
       }
     ]
   }, 
   {
     id: 45,
-    text: `Old Crankle Ver.2: What are you doing, young gob?`,
+    text: `Old Crankle Ver.2: What are you doing, young gob?(abbr of goblin)`,
     options: [
       {
-        text: `Please don't stop me robbing you!`,
-        nextText: 0,
-        funcRun: ``
+        text: `Please don't STOP ME ROBBING YOU!!!`,
+        nextText: 47,
+        funcRun: `pass`
       }
     ]
   }, 
   {
     id: 46,
-    text: `You don't want to lose your chance to gain the experience on robbing others, so you ignore the Old Crankle Ver.2""`,
+    text: `You didn't notice well what Archibald yelled behind, you just want to quickly excape this place.`,
     options: [
       {
-        text: ``,
-        nextText: 47,
-        funcRun: ``
+        text: `Continue`,
+        nextText: 48,
+        funcRun: `pass`
       }
     ]
   }, 
   {
     id: 47,
+    text: `You don't want to lose your chance to gain the experience on robbing others, so you ignore the Old Crankle Ver.2""`,
+    options: [
+      {
+        text: `Continue`,
+        nextText: 49,
+        funcRun: `displayVisChar`
+      }
+    ]
+  }, 
+  {
+    id: 48,
+    text: `You ran and ran, ran through the place you just start at`,
+    options: [
+      {
+        text: `I-I-I won't never help others again`,
+        nextText: 50,
+        funcRun: `pass`
+      },
+      {
+        text: `Crying inside`,
+        nextText: 50,
+        funcRun: `pass`
+      },
+      {
+        text: `🤬🤬🤬`,
+        nextText: 50,
+        funcRun: `pass`
+      }
+    ]
+  },
+  {
+    id: 49,
     text: `Old Crankle Ver.2 stard at you in that moment`,
+    options: [
+      {
+        text: `Don't you ever saw someone rob your pocket infront of you?`,
+        nextText: 51,
+        funcRun: `pass`
+      }
+    ]
+  },
+  {
+    id: 50,
+    text: `I WON't NEVER HELP OTHERS ANYMORE, as that in your mind, you decide to...`,
+    options: [
+      {
+        text: `Calm your mind and restart your way`,
+        nextText: 52,
+        funcRun: `pass`
+      },
+      {
+        text: `Go back home and never go to other places`,
+        nextText: 53,
+        funcRun: `pass`
+      },
+      {
+        text: `Curse`,
+        nextText: 54,
+        funcRun: `pass`
+      }
+    ]
+  },
+  {
+    id: 51,
+    text: `Old Crankle Ver.2 "..."`,
+    options: [
+      {
+        text: `...`,
+        nextText: 55,
+        funcRun: `pass`
+      }
+    ]
+  },
+  {
+    id: 52,
+    text: `You won't gave up, you dream is to be the Lord of Gambling, you won't give up here.`,
+    options: [
+      {
+        text: `I WOULD RESTART MY JORNALLLLLL!!!!!`,
+        nextText: 56,
+        funcRun: `pass`
+      }
+    ]
+  },
+  {
+    id: 53,
+    text: `This world is terrible, there is no hope anymore, NO ONE LIKE ME! QAQ`,
+    options: [
+      {
+        text: `MOM!!! I WANT TO GO HOMEEEEEEE!!!`,
+        nextText: 57,
+        funcRun: `pass`
+      }
+    ]
+  },
+  {
+    id: 54,
+    text: `I HATE THEM SO MUCH, WHAT A NICE PERSON AM I, WHY HE BLAME ME!`,
+    options: [
+      {
+        text: `Keep murmur`,
+        nextText: 60,
+        funcRun: `pass`
+      }
+    ]
+  },
+  {
+    id: 55,
+    text: `Old Crankle Ver.2: ......`,
+    options: [
+      {
+        text: `......`,
+        nextText: 59,
+        funcRun: `pass`
+      }
+    ]
+  },
+  {
+    id: 56,
+    text: `I WOULD NEVER GIVE UP!! I would face and challenge all the problems this time.`,
+    options: [
+      {
+        text: `Continue`,
+        nextText: 1,
+        funcRun: `pass`
+      }
+    ]
+  },
+  {
+    id: 57,
+    text: `You ran back to home, kick off your front door, than push all of your furnicher to block off the door. After that, you lock you inside your room. Half hour later, you felt in sleep~`,
+    options: [
+      {
+        text: `Continue`,
+        nextText: 58,
+        funcRun: `pass`
+      }
+    ]
+  },
+  {
+    id: 58,
+    text: `THE END`,
+    options: [
+      {
+        text: `Restart`,
+        nextText: 1,
+        funcRun: `bgSwapEpilogue`
+      }
+    ]
+  },
+  {
+    id: 59,
+    text: `I RAN OUT OF IDEA(AIDEN PLEASE HELP XDDDDDD)`,
+    options: [
+      {
+        text: ``,
+        nextText: 0,
+        funcRun: ``
+      }
+    ]
+  },
+  {
+    id: 60,
+    text: `Maybe..., is my fault?`,
+    options: [
+      {
+        text: `Yes`,
+        nextText: 61,
+        funcRun: `pass`
+      },
+      {
+        text: `NO`,
+        nextText: 62,
+        funcRun: `pass`
+      }
+    ]
+  },
+  {
+    id: 61,
+    text: `It's my fault, I should not wake him up, or maybe just have an experience of being rob by others.`,
+    options: [
+      {
+        text: `Calm yourself`,
+        nextText: 63,
+        funcRun: ``
+      }
+    ]
+  },
+  {
+    id: 62,
+    text: `no...noo.....NOO.......NOOOOOOOOOO!!!!!!`,
+    options: [
+      {
+        text: `Continue`,
+        nextText: 64,
+        funcRun: `pass`
+      }
+    ]
+  },
+  {
+    id: 63,
+    text: `Old Crankle Ver.2:".........`,
+    options: [
+      {
+        text: `Why we keep ...?`,
+        nextText: 65,
+        funcRun: `pass`
+      }
+    ]
+  },
+  {
+    id: 64,
+    text: `IT SHOULD NOT BE MY FAULT. IT'S HIS FAULT!!! IS THIS WORLD FAULT!!! IS NOT MY FAULT!!!`,
+    options: [
+      {
+        text: `Continue`,
+        nextText: 66,
+        funcRun: `pass`
+      }
+    ]
+  },
+  {
+    id: 65,
+    text: `Old Crankle Ver.2:"You just making a joke Huh?, give it back to me, young gob!"`,
+    options: [
+      {
+        text: `OK`,
+        nextText: 0,
+        funcRun: ``
+      },
+      {
+        text: `OK(of course not)`,
+        nextText: 0,
+        funcRun: ``
+      },
+      {
+        text: `NO :D`,
+        nextText: 0,
+        funcRun: ``
+      }
+    ]
+  },
+  {
+    id: 66,
+    text: ``,
+    options: [
+      {
+        text: ``,
+        nextText: 0,
+        funcRun: ``
+      }
+    ]
+  },
+  {
+    id: 66,
+    text: ``,
+    options: [
+      {
+        text: ``,
+        nextText: 0,
+        funcRun: ``
+      }
+    ]
+  },
+  {
+    id: 66,
+    text: ``,
+    options: [
+      {
+        text: ``,
+        nextText: 0,
+        funcRun: ``
+      }
+    ]
+  },
+  {
+    id: 66,
+    text: ``,
     options: [
       {
         text: ``,
