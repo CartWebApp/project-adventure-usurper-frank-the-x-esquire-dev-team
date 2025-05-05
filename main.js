@@ -1030,17 +1030,17 @@ const textNodes = [
     options: [
       {
         text: `OK`,
-        nextText: 0,
+        nextText: 67,
         funcRun: ``
       },
       {
         text: `OK(of course not)`,
-        nextText: 0,
+        nextText: 68,
         funcRun: ``
       },
       {
         text: `NO :D`,
-        nextText: 0,
+        nextText: 69,
         funcRun: ``
       }
     ]
