@@ -1031,22 +1031,71 @@ const textNodes = [
       {
         text: `OK`,
         nextText: 67,
-        funcRun: ``
+        funcRun: `pass`
       },
       {
         text: `OK(of course not)`,
         nextText: 68,
-        funcRun: ``
+        funcRun: `pass`
       },
       {
         text: `NO :D`,
         nextText: 69,
-        funcRun: ``
+        funcRun: `pass`
       }
     ]
   },
   {
     id: 66,
+    text: `You think and think, you realize this might just a dream, or, maybe this is a story. It is not true.`,
+    options: [
+      {
+        text: `Continue`,
+        nextText: 70,
+        funcRun: `pass`
+      }
+    ]
+  },
+  {
+    id: 67,
+    text: `You hand the pocket back to Old Crankle Ver.2, shame on your face, you decide to `,
+    options: [
+      {
+        text: `Ran out of tavern`,
+        nextText: 71,
+        funcRun: `pass`
+      },
+      {
+        text: `Stole him again`,
+        nextText: 72,
+        funcRun: `pass`
+      }
+    ]
+  },
+  {
+    id: 68,
+    text: `You face the Old Crankle Ver.2, you hand his pocket back, when Old Crankle Ver.2 hand it out, you suddenly withdraw back your hand and quickly put his pocket into your pants pocket.`,
+    options: [
+      {
+        text: `Continue`,
+        nextText: 73,
+        funcRun: `pass`
+      }
+    ]
+  },
+  {
+    id: 69,
+    text: `You smile at Old Crankle Ver.2. Old Crankle Ver.2 smile back to you, than ask you"Young gob? are you gonna give it back to me?"`,
+    options: [
+      {
+        text: ``,
+        nextText: 0,
+        funcRun: ``
+      }
+    ]
+  },
+  {
+    id: 70,
     text: ``,
     options: [
       {
@@ -1057,7 +1106,7 @@ const textNodes = [
     ]
   },
   {
-    id: 66,
+    id: 69,
     text: ``,
     options: [
       {
@@ -1068,7 +1117,7 @@ const textNodes = [
     ]
   },
   {
-    id: 66,
+    id: 69,
     text: ``,
     options: [
       {
@@ -1079,7 +1128,150 @@ const textNodes = [
     ]
   },
   {
-    id: 66,
+    id: 69,
+    text: ``,
+    options: [
+      {
+        text: ``,
+        nextText: 0,
+        funcRun: ``
+      }
+    ]
+  },
+  {
+    id: 69,
+    text: ``,
+    options: [
+      {
+        text: ``,
+        nextText: 0,
+        funcRun: ``
+      }
+    ]
+  },
+  {
+    id: 69,
+    text: ``,
+    options: [
+      {
+        text: ``,
+        nextText: 0,
+        funcRun: ``
+      }
+    ]
+  },
+  {
+    id: 69,
+    text: ``,
+    options: [
+      {
+        text: ``,
+        nextText: 0,
+        funcRun: ``
+      }
+    ]
+  },
+  {
+    id: 69,
+    text: ``,
+    options: [
+      {
+        text: ``,
+        nextText: 0,
+        funcRun: ``
+      }
+    ]
+  },
+  {
+    id: 69,
+    text: ``,
+    options: [
+      {
+        text: ``,
+        nextText: 0,
+        funcRun: ``
+      }
+    ]
+  },
+  {
+    id: 69,
+    text: ``,
+    options: [
+      {
+        text: ``,
+        nextText: 0,
+        funcRun: ``
+      }
+    ]
+  },
+  {
+    id: 69,
+    text: ``,
+    options: [
+      {
+        text: ``,
+        nextText: 0,
+        funcRun: ``
+      }
+    ]
+  },
+  {
+    id: 69,
+    text: ``,
+    options: [
+      {
+        text: ``,
+        nextText: 0,
+        funcRun: ``
+      }
+    ]
+  },
+  {
+    id: 69,
+    text: ``,
+    options: [
+      {
+        text: ``,
+        nextText: 0,
+        funcRun: ``
+      }
+    ]
+  },
+  {
+    id: 69,
+    text: ``,
+    options: [
+      {
+        text: ``,
+        nextText: 0,
+        funcRun: ``
+      }
+    ]
+  },
+  {
+    id: 69,
+    text: ``,
+    options: [
+      {
+        text: ``,
+        nextText: 0,
+        funcRun: ``
+      }
+    ]
+  },
+  {
+    id: 69,
+    text: ``,
+    options: [
+      {
+        text: ``,
+        nextText: 0,
+        funcRun: ``
+      }
+    ]
+  },
+  {
+    id: 69,
     text: ``,
     options: [
       {
