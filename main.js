@@ -987,7 +987,7 @@ const textNodes = [
       {
         text: `Calm yourself`,
         nextText: 63,
-        funcRun: ``
+        funcRun: `pass`
       }
     ]
   },
