@@ -1220,7 +1220,7 @@ const textNodes = [
     text: `As you walked out you see bunch of Red goblin walking around, and you notice there is a familiar goblin, that is the goblin that on your quest!(Actually right now I ran out of idea, so it is a bit boring, no correct grammer or spelling, but don't mind it! I GOT THIS!😁(I lie!))`,
     options: [
       {
-        text: ``,
+        text: ``, //not done/finish
         nextText: 0,
         funcRun: ``
       }
@@ -1228,34 +1228,34 @@ const textNodes = [
   },
   {
     id: 82,
-    text: `Archibald Madly stood at you. Than, he shouted"!@###!@ !@#$# GOBLIN!!!, get here and get this !@#$!@ a "`,
+    text: `Archibald Madly stood at you. Than, he shouted"!@###!@ !@#$# HAWK GOBLIN!!!, get here and get this !@#$!@ OFF!!! "`,
     options: [
       {
-        text: ``,
-        nextText: 0,
-        funcRun: ``
+        text: `Continue`,
+        nextText: 83,
+        funcRun: `pass`
       }
     ]
   },
   {
-    id: 69,
-    text: ``,
+    id: 83,
+    text: `You heard a deeply sound, than somethings jump across you, smash the front door of the tavern. It's Hawk Goblin!!`,
     options: [
       {
-        text: ``,
-        nextText: 0,
-        funcRun: ``
+        text: `WTH`,
+        nextText: 84,
+        funcRun: `pass`
       }
     ]
   },
   {
-    id: 69,
-    text: ``,
+    id: 84,
+    text: `WHAT THE F!#@ ??? WHO THE F!&@ ARE YOU??? AND HOW COULD YOU BE THAT FAT BUT CAN JUMP THAT HIGH AND CROSS OVER ME???`,
     options: [
       {
-        text: ``,
-        nextText: 0,
-        funcRun: ``
+        text: `Continue`,
+        nextText: 85,
+        funcRun: `pass`
       }
     ]
   },
