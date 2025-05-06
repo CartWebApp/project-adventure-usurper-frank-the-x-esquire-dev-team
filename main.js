@@ -867,7 +867,7 @@ const textNodes = [
   },
   {
     id: 51,
-    text: `Old Crankle Ver.2 "..."`,
+    text: `...`,
     options: [
       {
         text: `...`,
@@ -911,7 +911,7 @@ const textNodes = [
   },
   {
     id: 55,
-    text: `Old Crankle Ver.2: ......`,
+    text: `......`,
     options: [
       {
         text: `......`,
@@ -955,12 +955,12 @@ const textNodes = [
   },
   {
     id: 59,
-    text: `I RAN OUT OF IDEA(AIDEN PLEASE HELP XDDDDDD)`,
+    text: `.........`,
     options: [
       {
-        text: ``,
+        text: `.........`,
         nextText: 0,
-        funcRun: ``
+        funcRun: `pass`
       }
     ]
   },
@@ -986,7 +986,7 @@ const textNodes = [
     options: [
       {
         text: `Calm yourself`,
-        nextText: 63,
+        nextText: 64,
         funcRun: `pass`
       }
     ]
@@ -1004,7 +1004,7 @@ const textNodes = [
   },
   {
     id: 63,
-    text: `Old Crankle Ver.2:".........`,
+    text: `................`,
     options: [
       {
         text: `Why we keep ...?`,
@@ -1184,7 +1184,7 @@ const textNodes = [
   },
   {
     id: 78,
-    text: `As you walked out of tavern, you heard a Old Crankle Ver.2 Shouted inside the door"GIVE IT BACK TO ME, YOU LITTLE B%&# $&@&^@%@^%#@#!!!!!"`,
+    text: `As you walked out of tavern, you heard Old Crankle Ver.2 Shouted inside the door"GIVE IT BACK TO ME, YOU LITTLE B%&# $&@&^@%@^%#@#!!!!!"`,
     options: [
       {
         text: `Continue`,
