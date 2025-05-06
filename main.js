@@ -617,12 +617,12 @@ const textNodes = [
     options: [
       {
         text: `Gently open door and walk out`,
-        nextText: 0,//not done
+        nextText: 81,//not done
         funcRun: `speakerSwap`
       },
       {
         text: `Rudely kick out the door`,
-        nextText: 0,
+        nextText: 82,
         funcRun: `archiePortrait`
       }
     ]
@@ -959,7 +959,7 @@ const textNodes = [
     options: [
       {
         text: `.........`,
-        nextText: 0,
+        nextText: 63,
         funcRun: `pass`
       }
     ]
@@ -1173,7 +1173,7 @@ const textNodes = [
   },
   {
     id: 77,
-    text: `You as fast as you could, ran out of tavern, and start your journey.`,
+    text: `You ran as fast as you could, ran out of tavern, and start your journey.`,
     options: [
       {
         text: `Continue`,
@@ -1194,8 +1194,30 @@ const textNodes = [
     ]
   },
   {
-    id: 69,
-    text: ``,
+    id: 79,
+    text: `Time to explore this town`,
+    options: [
+      {
+        text: `Continue`,
+        nextText: 81,
+        funcRun: `pass`
+      }
+    ]
+  },
+  {
+    id: 80,
+    text: `You ignore it, step 1 of your foot out, think inside your mind. Now! is time for exploring!`,
+    options: [
+      {
+        text: `Continue`,
+        nextText: 81,
+        funcRun: `pass`
+      }
+    ]
+  },
+  {
+    id: 81,
+    text: `As you walked out you see bunch of Red goblin walking around, and you notice there is a familiar goblin, that is the goblin that on your quest!(Actually right now I ran out of idea, so it is a bit boring, no correct grammer or spelling, but don't mind it! I GOT THIS!😁(I lie!))`,
     options: [
       {
         text: ``,
@@ -1205,30 +1227,8 @@ const textNodes = [
     ]
   },
   {
-    id: 69,
-    text: ``,
-    options: [
-      {
-        text: ``,
-        nextText: 0,
-        funcRun: ``
-      }
-    ]
-  },
-  {
-    id: 69,
-    text: ``,
-    options: [
-      {
-        text: ``,
-        nextText: 0,
-        funcRun: ``
-      }
-    ]
-  },
-  {
-    id: 69,
-    text: ``,
+    id: 82,
+    text: `Archibald Madly stood at you. Than, he shouted"!@###!@ !@#$# GOBLIN!!!, get here and get this !@#$!@ a "`,
     options: [
       {
         text: ``,
