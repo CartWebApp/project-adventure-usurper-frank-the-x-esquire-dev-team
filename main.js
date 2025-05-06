@@ -617,7 +617,7 @@ const textNodes = [
     options: [
       {
         text: `Gently open door and walk out`,
-        nextText: 0,
+        nextText: 0,//not done
         funcRun: `speakerSwap`
       },
       {
@@ -758,7 +758,7 @@ const textNodes = [
     ]
   }, 
   {
-    id: 43,
+    id: 43, //Ending
     text: `YOU GOT KILLED`,
     options: [
       {
@@ -921,7 +921,7 @@ const textNodes = [
     ]
   },
   {
-    id: 56,
+    id: 56, //Ending
     text: `I WOULD NEVER GIVE UP!! I would face and challenge all the problems this time.`,
     options: [
       {
@@ -943,7 +943,7 @@ const textNodes = [
     ]
   },
   {
-    id: 58,
+    id: 58, //Ending
     text: `THE END`,
     options: [
       {
@@ -1062,12 +1062,12 @@ const textNodes = [
     options: [
       {
         text: `Ran out of tavern`,
-        nextText: 71,
+        nextText: 39,
         funcRun: `pass`
       },
       {
         text: `Stole him again`,
-        nextText: 72,
+        nextText: 71,
         funcRun: `pass`
       }
     ]
@@ -1078,7 +1078,7 @@ const textNodes = [
     options: [
       {
         text: `Continue`,
-        nextText: 73,
+        nextText: 72,
         funcRun: `pass`
       }
     ]
@@ -1088,108 +1088,108 @@ const textNodes = [
     text: `You smile at Old Crankle Ver.2. Old Crankle Ver.2 smile back to you, than ask you"Young gob? are you gonna give it back to me?"`,
     options: [
       {
-        text: ``,
-        nextText: 0,
-        funcRun: ``
+        text: `Continue`,
+        nextText: 73,
+        funcRun: `pass`
       }
     ]
   },
   {
-    id: 70,
-    text: ``,
+    id: 70, //Ending
+    text: `THE END`,
     options: [
       {
-        text: ``,
-        nextText: 0,
-        funcRun: ``
+        text: `Play Again`,
+        nextText: 1,
+        funcRun: `pass`
       }
     ]
   },
   {
-    id: 69,
-    text: ``,
+    id: 71,
+    text: `Although you still having shame on rob others and get cought up! But, this is not a way to give up on ROBBING OTHERS! `,
     options: [
       {
-        text: ``,
-        nextText: 0,
-        funcRun: ``
+        text: `Continue`,
+        nextText: 74,
+        funcRun: `pass`
       }
     ]
   },
   {
-    id: 69,
-    text: ``,
+    id: 72,
+    text: `Old Crankle Ver.2 "??????"`,
     options: [
       {
-        text: ``,
-        nextText: 0,
-        funcRun: ``
+        text: `RUN!`,
+        nextText: 75,
+        funcRun: `pass`
       }
     ]
   },
   {
-    id: 69,
-    text: ``,
+    id: 73,
+    text: `NO, you respond, than straightly turn 180 degree, like a hero, leave nothings but cool(idk how to describe but here what I describe lol 🤣) `,
     options: [
       {
-        text: ``,
-        nextText: 0,
-        funcRun: ``
+        text: `Very cool leaving`,
+        nextText: 76,
+        funcRun: `pass`
       }
     ]
   },
   {
-    id: 69,
-    text: ``,
+    id: 74,
+    text: `When Old Crankle Ver.2 leave it's notice on you, you quickly hand into his body, quickly rob out the pocket, quickly put it into your package, and quickly turn 180 degree!`,
     options: [
       {
-        text: ``,
-        nextText: 0,
-        funcRun: ``
+        text: `Continue`,
+        nextText: 77,
+        funcRun: `pass`
       }
     ]
   },
   {
-    id: 69,
-    text: ``,
+    id: 75,
+    text: `You use all of your calories, store all of the energy on your leg muscle's, you try hardly as you could, escape out of this tavern `,
     options: [
       {
-        text: ``,
-        nextText: 0,
-        funcRun: ``
+        text: `Continue`,
+        nextText: 77,
+        funcRun: `pass`
       }
     ]
   },
   {
-    id: 69,
-    text: ``,
+    id: 76,
+    text: `Old Crankle Ver.2 haven't came through what the hell are you doing, he stood two of his eye on you, ridiculously watch you leave the tavern. Suddenly, Old Crankle Ver.2 blink it's eye. He notice, He NOTICE THAT HE GOT ROB AGAIN!`,
     options: [
       {
-        text: ``,
-        nextText: 0,
-        funcRun: ``
+        text: `Continue`,
+        nextText: 78,
+        funcRun: `pass`
       }
     ]
   },
   {
-    id: 69,
-    text: ``,
+    id: 77,
+    text: `You as fast as you could, ran out of tavern, and start your journey.`,
     options: [
       {
-        text: ``,
-        nextText: 0,
-        funcRun: ``
+        text: `Continue`,
+        nextText: 79,
+        funcRun: `pass`
       }
     ]
   },
   {
-    id: 69,
-    text: ``,
+    id: 78,
+    text: `As you walked out of tavern, you heard a Old Crankle Ver.2 Shouted inside the door"GIVE IT BACK TO ME, YOU LITTLE B%&# $&@&^@%@^%#@#!!!!!"`,
     options: [
       {
-        text: ``,
-        nextText: 0,
-        funcRun: ``
+        text: `Continue`,
+        nextText: 80,
+        funcRun: `pass`
       }
     ]
   },
