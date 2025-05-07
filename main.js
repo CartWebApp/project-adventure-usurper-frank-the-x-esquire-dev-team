@@ -1220,7 +1220,7 @@ const textNodes = [
     text: `As you walked out you see bunch of Red goblin walking around, and you notice there is a familiar goblin, that is the goblin that on your quest!(Actually right now I ran out of idea, so it is a bit boring, no correct grammer or spelling, but don't mind it! I GOT THIS!😁(I lie!))`,
     options: [
       {
-        text: ``, //not done/finish
+        text: ``, //not done, not finish
         nextText: 0,
         funcRun: ``
       }
@@ -1260,24 +1260,357 @@ const textNodes = [
     ]
   },
   {
-    id: 69,
-    text: ``,
+    id: 85,
+    text: `???: "Are you the one who irrupt my dream?"`,
     options: [
       {
-        text: ``,
-        nextText: 0,
-        funcRun: ``
+        text: `Yes`,
+        nextText: 86,
+        funcRun: `pass`
+      },
+      {
+        text: `Who are you?`,
+        nextText: 87,
+        funcRun: `pass`
+      },
+      {
+        text: `No`,
+        nextText: 88,
+        funcRun: `pass`
       }
     ]
   },
   {
-    id: 69,
+    id: 86,
+    text: `???: "Do you know who I am?"`,
+    options: [
+      {
+        text: `No`,
+        nextText: 87,
+        funcRun: `pass`
+      }
+    ]
+  },
+  {
+    id: 87,
+    text: `I am Hawk Goblin, I am the strongest Goblin in the world, I would punch everyone who irrupt my dream!`,
+    options: [
+      {
+        text: `Ehhh, I'm sorry, could you not punch my face if you really going to punch me?`,
+        nextText: 89,
+        funcRun: `pass`
+      },
+      {
+        text: `DO YOU KNOW WHO I AM?`,
+        nextText: 90,
+        funcRun: `pass`
+      }
+    ]
+  },
+  {
+    id: 88,
+    text: `Not me! Is Him, you point where Archibald are.`,
+    options: [
+      {
+        text: `Continue`,
+        nextText: 91,
+        funcRun: `pass`
+      }
+    ]
+  },
+  {
+    id: 89,
+    text: `When you just finished your sentence, a big fist fly infront of your face, a huge punch sound surround this area. Your vision slowly turned off.`,
+    options: [
+      {
+        text: `Continue`,
+        nextText: 43,
+        funcRun: `pass`
+      }
+    ]
+  },
+  {
+    id: 90,
+    text: `Hawk Goblin "Who are you?"`,
+    options: [
+      {
+        text: `I am your friendly neighborhood Spider gob!`,
+        nextText: 89,
+        funcRun: `pass`
+      },
+      {
+        text: `I am the goblin who interest are become a hero.`,
+        nextText: 92,
+        funcRun: `pass`
+      },
+      {
+        text: `I'm fine thank you and you?`,
+        nextText: 93,
+        funcRun: `pass`
+      }
+    ]
+  },
+  {
+    id: 86,
     text: ``,
     options: [
       {
         text: ``,
         nextText: 0,
-        funcRun: ``
+        funcRun: `pass`
+      }
+    ]
+  },
+  {
+    id: 86,
+    text: ``,
+    options: [
+      {
+        text: ``,
+        nextText: 0,
+        funcRun: `pass`
+      }
+    ]
+  },
+  {
+    id: 86,
+    text: ``,
+    options: [
+      {
+        text: ``,
+        nextText: 0,
+        funcRun: `pass`
+      }
+    ]
+  },
+  {
+    id: 86,
+    text: ``,
+    options: [
+      {
+        text: ``,
+        nextText: 0,
+        funcRun: `pass`
+      }
+    ]
+  },
+  {
+    id: 86,
+    text: ``,
+    options: [
+      {
+        text: ``,
+        nextText: 0,
+        funcRun: `pass`
+      }
+    ]
+  },
+  {
+    id: 86,
+    text: ``,
+    options: [
+      {
+        text: ``,
+        nextText: 0,
+        funcRun: `pass`
+      }
+    ]
+  },
+  {
+    id: 86,
+    text: ``,
+    options: [
+      {
+        text: ``,
+        nextText: 0,
+        funcRun: `pass`
+      }
+    ]
+  },
+  {
+    id: 86,
+    text: ``,
+    options: [
+      {
+        text: ``,
+        nextText: 0,
+        funcRun: `pass`
+      }
+    ]
+  },
+  {
+    id: 86,
+    text: ``,
+    options: [
+      {
+        text: ``,
+        nextText: 0,
+        funcRun: `pass`
+      }
+    ]
+  },
+  {
+    id: 86,
+    text: ``,
+    options: [
+      {
+        text: ``,
+        nextText: 0,
+        funcRun: `pass`
+      }
+    ]
+  },
+  {
+    id: 86,
+    text: ``,
+    options: [
+      {
+        text: ``,
+        nextText: 0,
+        funcRun: `pass`
+      }
+    ]
+  },
+  {
+    id: 86,
+    text: ``,
+    options: [
+      {
+        text: ``,
+        nextText: 0,
+        funcRun: `pass`
+      }
+    ]
+  },
+  {
+    id: 86,
+    text: ``,
+    options: [
+      {
+        text: ``,
+        nextText: 0,
+        funcRun: `pass`
+      }
+    ]
+  },
+  {
+    id: 86,
+    text: ``,
+    options: [
+      {
+        text: ``,
+        nextText: 0,
+        funcRun: `pass`
+      }
+    ]
+  },
+  {
+    id: 86,
+    text: ``,
+    options: [
+      {
+        text: ``,
+        nextText: 0,
+        funcRun: `pass`
+      }
+    ]
+  },
+  {
+    id: 86,
+    text: ``,
+    options: [
+      {
+        text: ``,
+        nextText: 0,
+        funcRun: `pass`
+      }
+    ]
+  },
+  {
+    id: 86,
+    text: ``,
+    options: [
+      {
+        text: ``,
+        nextText: 0,
+        funcRun: `pass`
+      }
+    ]
+  },
+  {
+    id: 86,
+    text: ``,
+    options: [
+      {
+        text: ``,
+        nextText: 0,
+        funcRun: `pass`
+      }
+    ]
+  },
+  {
+    id: 86,
+    text: ``,
+    options: [
+      {
+        text: ``,
+        nextText: 0,
+        funcRun: `pass`
+      }
+    ]
+  },
+  {
+    id: 86,
+    text: ``,
+    options: [
+      {
+        text: ``,
+        nextText: 0,
+        funcRun: `pass`
+      }
+    ]
+  },
+  {
+    id: 86,
+    text: ``,
+    options: [
+      {
+        text: ``,
+        nextText: 0,
+        funcRun: `pass`
+      }
+    ]
+  },
+  {
+    id: 86,
+    text: ``,
+    options: [
+      {
+        text: ``,
+        nextText: 0,
+        funcRun: `pass`
+      }
+    ]
+  },
+  {
+    id: 86,
+    text: ``,
+    options: [
+      {
+        text: ``,
+        nextText: 0,
+        funcRun: `pass`
+      }
+    ]
+  },
+  {
+    id: 86,
+    text: ``,
+    options: [
+      {
+        text: ``,
+        nextText: 0,
+        funcRun: `pass`
       }
     ]
   }
