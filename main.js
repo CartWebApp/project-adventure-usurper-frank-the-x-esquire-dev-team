@@ -57,6 +57,7 @@ const goblinResist = `url(images/characters/goblin2.png)`;
 const goblinClan = `url(images/characters/goblin3.png)`;
 const sans = "url(images/characters/goblinSans.png)";
 const archie = `url(images/characters/ARCHBOSS.png)`;
+const hulkGoblin = "url(images/characters/Hulk_goblin-removebg-preview.png)";
 
 // Background Images
 
@@ -1228,7 +1229,7 @@ const textNodes = [
   },
   {
     id: 82,
-    text: `Archibald Madly stood at you. Than, he shouted"!@###!@ !@#$# HAWK GOBLIN!!!, get here and get this !@#$!@ OFF!!! "`,
+    text: `Archibald Madly stood at you. Than, he shouted"!@###!@ !@#$# HULK GOBLIN!!!, get here and get this !@#$!@ OFF!!! "`,
     options: [
       {
         text: `Continue`,
@@ -1239,7 +1240,7 @@ const textNodes = [
   },
   {
     id: 83,
-    text: `You heard a deeply sound, than somethings jump across you, smash the front door of the tavern. It's Hawk Goblin!!`,
+    text: `You heard a deeply sound, than somethings jump across you, smash the front door of the tavern. It's Hulk Goblin!!`,
     options: [
       {
         text: `WTH`,
@@ -1293,7 +1294,7 @@ const textNodes = [
   },
   {
     id: 87,
-    text: `I am Hawk Goblin, I am the strongest Goblin in the world, I would punch everyone who irrupt my dream!`,
+    text: `I am Hulk Goblin, I am the strongest Goblin in the world, I would punch everyone who irrupt my dream!`,
     options: [
       {
         text: `Ehhh, I'm sorry, could you not punch my face if you really going to punch me?`,
@@ -1325,13 +1326,13 @@ const textNodes = [
       {
         text: `Continue`,
         nextText: 43,
-        funcRun: `pass`
+        funcRun: `displayVisChar`
       }
     ]
   },
   {
     id: 90,
-    text: `Hawk Goblin "Who are you?"`,
+    text: `Hulk Goblin "Who are you?"`,
     options: [
       {
         text: `I am your friendly neighborhood Spider gob!`,
@@ -1351,95 +1352,100 @@ const textNodes = [
     ]
   },
   {
-    id: 86,
-    text: ``,
+    id: 91,
+    text: `Hulk Goblin stare at Archibald, than shouted"MOM!"`,
     options: [
       {
-        text: ``,
-        nextText: 0,
+        text: `??????`,
+        nextText: 94,
         funcRun: `pass`
       }
     ]
   },
   {
-    id: 86,
-    text: ``,
+    id: 92,
+    text: `Archibald & Hulk Goblin "OK, than?"`,
     options: [
       {
-        text: ``,
-        nextText: 0,
+        text: `So, could you leave me alone?`,
+        nextText: 89,
         funcRun: `pass`
       }
     ]
   },
   {
-    id: 86,
-    text: ``,
+    id: 93,
+    text: `Archibald & Hulk Goblin "??????"`,
     options: [
       {
-        text: ``,
-        nextText: 0,
+        text: `:D`,
+        nextText: 95,
+        funcRun: `pass`
+      },
+      {
+        text: `What is the matter?`,
+        nextText: 96,
         funcRun: `pass`
       }
     ]
   },
   {
-    id: 86,
-    text: ``,
+    id: 94,
+    text: `You look at Archibald, inside of your mind, it is ridiculous to believe that Archibald is female goblin!!!`,
     options: [
       {
-        text: ``,
-        nextText: 0,
+        text: `!!!`,
+        nextText: 97,
         funcRun: `pass`
       }
     ]
   },
   {
-    id: 86,
-    text: ``,
+    id: 95,
+    text: `You smile at both of them, they smile back to you.`,
     options: [
       {
-        text: ``,
-        nextText: 0,
+        text: `Continue`,
+        nextText: 98,
         funcRun: `pass`
       }
     ]
   },
   {
-    id: 86,
-    text: ``,
+    id: 96,
+    text: `Archibald & Hulk Goblin "Nothing..."`,
     options: [
       {
-        text: ``,
-        nextText: 0,
+        text: `What's next?`,
+        nextText: 99,
         funcRun: `pass`
       }
     ]
   },
   {
-    id: 86,
-    text: ``,
+    id: 97,
+    text: `You incredibly look at Archibald, ridiculously say out "You are female!" Archibald shouted back"Of Course! NOT!! "`,
     options: [
       {
-        text: ``,
-        nextText: 0,
+        text: `Continue`,
+        nextText: 100,
         funcRun: `pass`
       }
     ]
   },
   {
-    id: 86,
-    text: ``,
+    id: 98,
+    text: `You see a big fist fly infront of your face, a huge punch sound surround this area. Your vision slowly turned off.`,
     options: [
       {
-        text: ``,
-        nextText: 0,
-        funcRun: `pass`
+        text: `Continue`,
+        nextText: 43,
+        funcRun: `displayVisChar`
       }
     ]
   },
   {
-    id: 86,
+    id: 99,
     text: ``,
     options: [
       {
