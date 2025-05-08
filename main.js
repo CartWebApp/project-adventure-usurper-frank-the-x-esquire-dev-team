@@ -782,7 +782,7 @@ const textNodes = [
       {
         text: `Stole it's pocket infront of him`,
         nextText: 45,
-        funcRun: `displayVisChar`
+        funcRun: `speakerSwap`
       }
     ]
   }, 
