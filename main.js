@@ -118,6 +118,9 @@ let functions = {
   clanPortrait: function () {
     characterChange(goblinClan);
   },
+  hulkPortrait: function () {
+    characterChange(hulkGoblin);
+  },
   resistPortrait: function () {
     characterChange(goblinResist);
   },
@@ -126,6 +129,9 @@ let functions = {
   },
   archiePortrait: function () {
     displayVisiblity(`dialogCharacter`);
+    characterChange(archie);
+  },
+  archiePortrait2: function () {
     characterChange(archie);
   },
   clanSpySpeak: function () {
@@ -882,7 +888,7 @@ const textNodes = [
     text: `You won't gave up, you dream is to be the Lord of Gambling, you won't give up here.`,
     options: [
       {
-        text: `I WOULD RESTART MY JORNALLLLLL!!!!!`,
+        text: `I WOULD RESTART MY JOURNEY!!!!!`,
         nextText: 56,
         funcRun: `pass`
       }
@@ -928,7 +934,7 @@ const textNodes = [
       {
         text: `Continue`,
         nextText: 1,
-        funcRun: `pass`
+        funcRun: `bgSwapEpilogue`
       }
     ]
   },
@@ -1102,7 +1108,7 @@ const textNodes = [
       {
         text: `Play Again`,
         nextText: 1,
-        funcRun: `pass`
+        funcRun: `bgSwapEpilogue`
       }
     ]
   },
@@ -1234,7 +1240,7 @@ const textNodes = [
       {
         text: `Continue`,
         nextText: 83,
-        funcRun: `pass`
+        funcRun: `hulkPortrait`
       }
     ]
   },
@@ -1245,7 +1251,7 @@ const textNodes = [
       {
         text: `WTH`,
         nextText: 84,
-        funcRun: `pass`
+        funcRun: `speakerSwap`
       }
     ]
   },
@@ -1256,7 +1262,7 @@ const textNodes = [
       {
         text: `Continue`,
         nextText: 85,
-        funcRun: `pass`
+        funcRun: `speakerSwap`
       }
     ]
   },
@@ -1277,7 +1283,7 @@ const textNodes = [
       {
         text: `No`,
         nextText: 88,
-        funcRun: `pass`
+        funcRun: `speakerSwap`
       }
     ]
   },
@@ -1315,7 +1321,7 @@ const textNodes = [
       {
         text: `Continue`,
         nextText: 91,
-        funcRun: `pass`
+        funcRun: `speakerSwap`
       }
     ]
   },
@@ -1396,7 +1402,7 @@ const textNodes = [
       {
         text: `!!!`,
         nextText: 97,
-        funcRun: `pass`
+        funcRun: `speakerSwap`
       }
     ]
   },
@@ -1429,7 +1435,7 @@ const textNodes = [
       {
         text: `Continue`,
         nextText: 100,
-        funcRun: `pass`
+        funcRun: `speakerSwap`
       }
     ]
   },
@@ -1462,7 +1468,7 @@ const textNodes = [
       {
         text: `Continue`,
         nextText: 101,
-        funcRun: `pass`
+        funcRun: `archiePortrait2`
       }
     ]
   },
@@ -1517,7 +1523,7 @@ const textNodes = [
       {
         text: `???`,
         nextText: 106,
-        funcRun: `pass`
+        funcRun: `hulkPortrait`
       }
     ]
   },
@@ -1528,7 +1534,7 @@ const textNodes = [
       {
         text: `...`,
         nextText: 107,
-        funcRun: `pass`
+        funcRun: `archiePortrait2`
       }
     ]
   },
