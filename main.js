@@ -1515,7 +1515,7 @@ const textNodes = [
     text: `Archibald guilty face to Hulk Goblin. "Honey~ I didn't mean to ruin your dream, could you for give Mommy?"`,
     options: [
       {
-        text: `IDK wt I writing now`,
+        text: `???`,
         nextText: 106,
         funcRun: `pass`
       }
@@ -1527,14 +1527,14 @@ const textNodes = [
     options: [
       {
         text: `...`,
-        nextText: 0,
+        nextText: 107,
         funcRun: `pass`
       }
     ]
   },
   {
-    id: 86,
-    text: ``,
+    id: 107,
+    text: `Archibald"It is time to shine???"`,
     options: [
       {
         text: ``,
