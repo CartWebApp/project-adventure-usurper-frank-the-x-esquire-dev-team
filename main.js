@@ -1500,22 +1500,22 @@ const textNodes = [
     ]
   },
   {
-    id: 86,
-    text: ``,
+    id: 104,
+    text: `Archibald"Caught! Sh-shh-shut up!"`,
     options: [
       {
-        text: ``,
-        nextText: 0,
+        text: `Continue`,
+        nextText: 105,
         funcRun: `pass`
       }
     ]
   },
   {
-    id: 86,
-    text: ``,
+    id: 105,
+    text: `Archibald guilty face to Hulk Goblin. "Honey~ I didn't mean to ruin your dream, could you for give Mommy?"`,
     options: [
       {
-        text: ``,
+        text: `IDK wt I writing now`,
         nextText: 0,
         funcRun: `pass`
       }
