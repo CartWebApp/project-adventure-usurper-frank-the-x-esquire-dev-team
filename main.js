@@ -1446,55 +1446,55 @@ const textNodes = [
   },
   {
     id: 99,
-    text: ``,
+    text: `As you finished your sentence, you see a big fist fly infront of your face, a huge sound surround this area. Your vision slowly turned off.`,
     options: [
       {
-        text: ``,
-        nextText: 0,
+        text: `Continue`,
+        nextText: 43,
+        funcRun: `displayVisChar`
+      }
+    ]
+  },
+  {
+    id: 100,
+    text: `Than why he call you mom?`,
+    options: [
+      {
+        text: `Continue`,
+        nextText: 101,
         funcRun: `pass`
       }
     ]
   },
   {
-    id: 86,
-    text: ``,
+    id: 101,
+    text: `Archibald"I only adopted him 2 years long. Also, I think it's IQ was pretty lower than average IQ."`,
     options: [
       {
-        text: ``,
-        nextText: 0,
+        text: `Oh↗`,
+        nextText: 102,
         funcRun: `pass`
       }
     ]
   },
   {
-    id: 86,
-    text: ``,
+    id: 102,
+    text: `Don't look at him like that! Right now his IQ is way more higher than I adopted him.`,
     options: [
       {
-        text: ``,
-        nextText: 0,
+        text: `Oh↘`,
+        nextText: 103,
         funcRun: `pass`
       }
     ]
   },
   {
-    id: 86,
-    text: ``,
+    id: 103,
+    text: `Archibald said it quietly:"But still lower than normal goblin."`,
     options: [
       {
-        text: ``,
-        nextText: 0,
-        funcRun: `pass`
-      }
-    ]
-  },
-  {
-    id: 86,
-    text: ``,
-    options: [
-      {
-        text: ``,
-        nextText: 0,
+        text: `Oh↗`,
+        nextText: 104,
         funcRun: `pass`
       }
     ]
