@@ -1516,17 +1516,17 @@ const textNodes = [
     options: [
       {
         text: `IDK wt I writing now`,
-        nextText: 0,
+        nextText: 106,
         funcRun: `pass`
       }
     ]
   },
   {
-    id: 86,
-    text: ``,
+    id: 106,
+    text: `Hulk Goblin"I forgive you. Mom!"`,
     options: [
       {
-        text: ``,
+        text: `...`,
         nextText: 0,
         funcRun: `pass`
       }
