@@ -723,7 +723,7 @@ const textNodes = [
   },
   {
     id: 40,
-    text: `Although you thinking in your mind, stoling is illegal, but you can't stop your hands`,
+    text: `Even though stealing may be illegal, it's never going to stop you!`,
     options: [
       {
         text: `Target next `,
@@ -734,7 +734,7 @@ const textNodes = [
   },
   {
     id: 41,
-    text: `At that moment, when you turn back to see does Old Crankle chasing to you. You saw the Archibald chase out and ran straight to you. In just a moment, he catches up to you. You suddenly find yourself on the floor. Archibold shouts,"Nobody who destroys my property gets to live to tell the tale!", before bringing a large cinder block down on your head.`,
+    text: `You turn around to see Old Crankle and Archie chasing you.Just a moment later, you suddenly find yourself on the floor. Archie shouts,"Nobody who destroys my property gets to live to tell the tale!", before bringing a large cinder block down on your head.`,
     options: [
       {
         text: `Continue`,
@@ -748,17 +748,17 @@ const textNodes = [
     text: `You see another familiar goblin`,
     options: [
       {
-        text: `Decide to rob its pocket!`,
+        text: `Pickpocket him!`,
         nextText: 44,
         funcRun: `pass`
       },
       {
-        text: `DECIDE TO ROB ITS POCKET!`,
+        text: `PLUNDER HIS PANTALOONS!`,
         nextText: 44,
         funcRun: `pass`
       },
       {
-        text: `I don't think there is option for me to choose`,
+        text: `None of these are good options`,
         nextText: 44,
         funcRun: `pass`
       }
@@ -777,10 +777,10 @@ const textNodes = [
   }, 
   {
     id: 44,
-    text: `So you walk to the goblin that you target to rob next, but when you try to rob his pocket, he turn its front to you`,
+    text: `You approach the goblin that you intend to rob next, but as you reach for his pocket, whips around to face you`,
     options: [
       {
-        text: `Stole it's pocket infront of him`,
+        text: `Rob him anyways`,
         nextText: 45,
         funcRun: `speakerSwap`
       }
@@ -788,18 +788,18 @@ const textNodes = [
   }, 
   {
     id: 45,
-    text: `Old Crankle Ver.2: What are you doing, young gob?(abbr of goblin)`,
+    text: `Old Crankle Ver.2: What are you doing, young gob?`,
     options: [
       {
-        text: `Please don't STOP ME ROBBING YOU!!!`,
+        text: `Please don't STOP ME FROM ROBBING YOU!!!`,
         nextText: 47,
-        funcRun: `pass`
+        funcRun: `speakerSwap`
       }
     ]
   }, 
   {
     id: 46,
-    text: `You didn't notice well what Archibald yelled behind, you just want to quickly excape this place.`,
+    text: `You couldn't hear what Archie had said, nor did you really care, you just wanted to get outta there.`,
     options: [
       {
         text: `Continue`,
@@ -810,26 +810,26 @@ const textNodes = [
   }, 
   {
     id: 47,
-    text: `You don't want to lose your chance to gain the experience on robbing others, so you ignore the Old Crankle Ver.2""`,
+    text: `You don't want to miss out on the slight-of-hand experience, so you ignore Old Crankle Ver.2`,
     options: [
       {
         text: `Continue`,
         nextText: 49,
-        funcRun: `displayVisChar`
+        funcRun: `speakerSwap`
       }
     ]
   }, 
   {
     id: 48,
-    text: `You ran and ran, ran through the place you just start at`,
+    text: `You run for miles and miles, and find yourself back home to reflect on your choices so far.`,
     options: [
       {
-        text: `I-I-I won't never help others again`,
+        text: `I-I-I will NEVER help others again`,
         nextText: 50,
         funcRun: `pass`
       },
       {
-        text: `Crying inside`,
+        text: `Cry`,
         nextText: 50,
         funcRun: `pass`
       },
@@ -842,10 +842,10 @@ const textNodes = [
   },
   {
     id: 49,
-    text: `Old Crankle Ver.2 stard at you in that moment`,
+    text: `Old Crankle Ver.2 stares at you for a moment`,
     options: [
       {
-        text: `Don't you ever saw someone rob your pocket infront of you?`,
+        text: `Haven't you ever seen someone rob your pockets infront of you?`,
         nextText: 51,
         funcRun: `pass`
       }
@@ -853,15 +853,15 @@ const textNodes = [
   },
   {
     id: 50,
-    text: `I WON't NEVER HELP OTHERS ANYMORE, as that in your mind, you decide to...`,
+    text: `I WILL NEVER HELP OTHERS AGAIN! With this in your mind, you decide to...`,
     options: [
       {
-        text: `Calm your mind and restart your way`,
+        text: `Calm your mind and restart your journey`,
         nextText: 52,
         funcRun: `pass`
       },
       {
-        text: `Go back home and never go to other places`,
+        text: `Go back home and never leave`,
         nextText: 53,
         funcRun: `pass`
       },
@@ -879,16 +879,16 @@ const textNodes = [
       {
         text: `...`,
         nextText: 55,
-        funcRun: `pass`
+        funcRun: `speakerSwap`
       }
     ]
   },
   {
     id: 52,
-    text: `You won't gave up, you dream is to be the Lord of Gambling, you won't give up here.`,
+    text: `You can't give up now, your dream is to be the King of the Gamblers, you won't give up here.`,
     options: [
       {
-        text: `I WOULD RESTART MY JOURNEY!!!!!`,
+        text: `I SHALL RESTART MY JOURNEY!!!!!`,
         nextText: 56,
         funcRun: `pass`
       }
@@ -896,7 +896,7 @@ const textNodes = [
   },
   {
     id: 53,
-    text: `This world is terrible, there is no hope anymore, NO ONE LIKE ME! QAQ`,
+    text: `This world is terrible, there is no hope anymore, NOBODY LIKES ME!`,
     options: [
       {
         text: `MOM!!! I WANT TO GO HOMEEEEEEE!!!`,
@@ -907,10 +907,10 @@ const textNodes = [
   },
   {
     id: 54,
-    text: `I HATE THEM SO MUCH, WHAT A NICE PERSON AM I, WHY HE BLAME ME!`,
+    text: `I HATE THEM SO MUCH, I'M THE NICEST PERSON I KNOW, WHY WOULD HE BLAME ME!`,
     options: [
       {
-        text: `Keep murmur`,
+        text: `Ponder`,
         nextText: 60,
         funcRun: `pass`
       }
@@ -923,13 +923,13 @@ const textNodes = [
       {
         text: `......`,
         nextText: 59,
-        funcRun: `pass`
+        funcRun: `speakerSwap`
       }
     ]
   },
   {
     id: 56, //Ending
-    text: `I WOULD NEVER GIVE UP!! I would face and challenge all the problems this time.`,
+    text: `I WILL NEVER GIVE UP!! I will face and challenge all the problems this time.`,
     options: [
       {
         text: `Continue`,
@@ -940,7 +940,7 @@ const textNodes = [
   },
   {
     id: 57,
-    text: `You ran back to home, kick off your front door, than push all of your furnicher to block off the door. After that, you lock you inside your room. Half hour later, you felt in sleep~`,
+    text: `You sprint back home, kick open your front door, then barricade it with all your furniture. You then curl up in a ball in your living room. You are never seen again.`,
     options: [
       {
         text: `Continue`,
@@ -967,13 +967,13 @@ const textNodes = [
       {
         text: `.........`,
         nextText: 63,
-        funcRun: `pass`
+        funcRun: `speakerSwap`
       }
     ]
   },
   {
     id: 60,
-    text: `Maybe..., is my fault?`,
+    text: `Maybe..., it's my fault?`,
     options: [
       {
         text: `Yes`,
@@ -989,7 +989,7 @@ const textNodes = [
   },
   {
     id: 61,
-    text: `It's my fault, I should not wake him up, or maybe just have an experience of being rob by others.`,
+    text: `It's my fault, I shouldn't have awoken him, or maybe I should have just robbed someone else for experience.`,
     options: [
       {
         text: `Calm yourself`,
@@ -1016,13 +1016,13 @@ const textNodes = [
       {
         text: `Why we keep ...?`,
         nextText: 65,
-        funcRun: `pass`
+        funcRun: `speakerSwap`
       }
     ]
   },
   {
     id: 64,
-    text: `IT SHOULD NOT BE MY FAULT. IT'S HIS FAULT!!! IS THIS WORLD FAULT!!! IS NOT MY FAULT!!!`,
+    text: `IT CAN'T BE MY FAULT. IT'S HIS FAULT!!! IT'S THE WORLD'S FAULT!!! IT'S NOT MY FAULT!!!`,
     options: [
       {
         text: `Continue`,
@@ -1033,12 +1033,12 @@ const textNodes = [
   },
   {
     id: 65,
-    text: `Old Crankle Ver.2:"You just making a joke Huh?, give it back to me, young gob!"`,
+    text: `Old Crankle Ver.2:"Your just messing with me, right? Give that back to me, young gob!"`,
     options: [
       {
         text: `OK`,
         nextText: 67,
-        funcRun: `pass`
+        funcRun: `speakerSwap`
       },
       {
         text: `OK(of course not)`,
@@ -1054,7 +1054,7 @@ const textNodes = [
   },
   {
     id: 66,
-    text: `You think and think, you realize this might just a dream, or, maybe this is a story. It is not true.`,
+    text: `As you sit there by yourself, everything begins to make sense! You realize that this must just be a dream, or, maybe this is just a simulation run by massive hairless beasts for their amusement. Either way, the answer is clear, none of this is real!`,
     options: [
       {
         text: `Continue`,
@@ -1065,15 +1065,15 @@ const textNodes = [
   },
   {
     id: 67,
-    text: `You hand the pocket back to Old Crankle Ver.2, shame on your face, you decide to `,
+    text: `You hand the coins back to Old Crankle Ver.2, as shame falls upon your face, you decide to `,
     options: [
       {
-        text: `Ran out of tavern`,
+        text: `Run out of tavern`,
         nextText: 39,
         funcRun: `pass`
       },
       {
-        text: `Stole him again`,
+        text: `Rob him again`,
         nextText: 71,
         funcRun: `pass`
       }
@@ -1081,23 +1081,23 @@ const textNodes = [
   },
   {
     id: 68,
-    text: `You face the Old Crankle Ver.2, you hand his pocket back, when Old Crankle Ver.2 hand it out, you suddenly withdraw back your hand and quickly put his pocket into your pants pocket.`,
+    text: `You face Old Crankle Ver.2, you hold out a hand filled with his coins, when Old Crankle Ver.2 reaches out to grab them, you suddenly withdraw your hand and quickly pocket the loot.`,
     options: [
       {
         text: `Continue`,
         nextText: 72,
-        funcRun: `pass`
+        funcRun: `speakerSwap`
       }
     ]
   },
   {
     id: 69,
-    text: `You smile at Old Crankle Ver.2. Old Crankle Ver.2 smile back to you, than ask you"Young gob? are you gonna give it back to me?"`,
+    text: `You smile at Old Crankle Ver.2. Old Crankle Ver.2 smile back to you, he then asks you"Young gob? Are you gonna give it back to me?"`,
     options: [
       {
         text: `Continue`,
         nextText: 73,
-        funcRun: `pass`
+        funcRun: `speakerSwap`
       }
     ]
   },
@@ -1114,7 +1114,7 @@ const textNodes = [
   },
   {
     id: 71,
-    text: `Although you still having shame on rob others and get cought up! But, this is not a way to give up on ROBBING OTHERS! `,
+    text: `Although you still feel the shame of getting caught robbing others, you can't just stop now! This is PRIME pickpocketing time! `,
     options: [
       {
         text: `Continue`,
@@ -1136,18 +1136,18 @@ const textNodes = [
   },
   {
     id: 73,
-    text: `NO, you respond, than straightly turn 180 degree, like a hero, leave nothings but cool(idk how to describe but here what I describe lol 🤣) `,
+    text: `NO, you respond, than quickly whirl around, flaring your cape up as you do so.`,
     options: [
       {
-        text: `Very cool leaving`,
+        text: `Very cool exit`,
         nextText: 76,
-        funcRun: `pass`
+        funcRun: `speakerSwap`
       }
     ]
   },
   {
     id: 74,
-    text: `When Old Crankle Ver.2 leave it's notice on you, you quickly hand into his body, quickly rob out the pocket, quickly put it into your package, and quickly turn 180 degree!`,
+    text: `As Old Crankle Ver.2 turns back to his previous conversation, you quickly snatch to coins back out of his pocket!`,
     options: [
       {
         text: `Continue`,
@@ -1158,18 +1158,18 @@ const textNodes = [
   },
   {
     id: 75,
-    text: `You use all of your calories, store all of the energy on your leg muscle's, you try hardly as you could, escape out of this tavern `,
+    text: `Using all the energy left in you, you sprint as fast as possible out of the tavern`,
     options: [
       {
         text: `Continue`,
         nextText: 77,
-        funcRun: `pass`
+        funcRun: `bgSwapGreen`
       }
     ]
   },
   {
     id: 76,
-    text: `Old Crankle Ver.2 haven't came through what the hell are you doing, he stood two of his eye on you, ridiculously watch you leave the tavern. Suddenly, Old Crankle Ver.2 blink it's eye. He notice, He NOTICE THAT HE GOT ROB AGAIN!`,
+    text: `Old Crankle Ver.2 watches as you exit the tavern, stunned for a moment by how stupid that exit was, he then realizes that HE WAS JUST ROBBED!`,
     options: [
       {
         text: `Continue`,
@@ -1180,7 +1180,7 @@ const textNodes = [
   },
   {
     id: 77,
-    text: `You ran as fast as you could, ran out of tavern, and start your journey.`,
+    text: `You run as fast as you can, out of tavern, and begin your journey.`,
     options: [
       {
         text: `Continue`,
@@ -1191,12 +1191,12 @@ const textNodes = [
   },
   {
     id: 78,
-    text: `As you walked out of tavern, you heard Old Crankle Ver.2 Shouted inside the door"GIVE IT BACK TO ME, YOU LITTLE B%&# $&@&^@%@^%#@#!!!!!"`,
+    text: `As you walk out of tavern, you faintly hear Old Crankle Ver.2 shout from inside "GIVE THAT BACK TO ME, YOU LITTLE B%&# $&@&^@%@^%#@#!!!!!"`,
     options: [
       {
         text: `Continue`,
         nextText: 80,
-        funcRun: `pass`
+        funcRun: `speakerSwap`
       }
     ]
   },
@@ -1213,7 +1213,7 @@ const textNodes = [
   },
   {
     id: 80,
-    text: `You ignore it, step 1 of your foot out, think inside your mind. Now! is time for exploring!`,
+    text: `You ignore him, and prepare for a good old adventure!`,
     options: [
       {
         text: `Continue`,
@@ -1235,7 +1235,7 @@ const textNodes = [
   },
   {
     id: 82,
-    text: `Archibald Madly stood at you. Than, he shouted"!@###!@ !@#$# HULK GOBLIN!!!, get here and get this !@#$!@ OFF!!! "`,
+    text: `Archie glares at you. Then, he shouts"!@###!@ !@#$# HULK GOBLIN!!!, get here and DESTROY THIS !@#$!@!!! "`,
     options: [
       {
         text: `Continue`,
@@ -1246,7 +1246,7 @@ const textNodes = [
   },
   {
     id: 83,
-    text: `You heard a deeply sound, than somethings jump across you, smash the front door of the tavern. It's Hulk Goblin!!`,
+    text: `You hear a loud wooshing sound over your head before you hear a large crash in front of you. As the dust settles you can barely make out the BEAST before you.`,
     options: [
       {
         text: `WTH`,
@@ -1257,7 +1257,7 @@ const textNodes = [
   },
   {
     id: 84,
-    text: `WHAT THE F!#@ ??? WHO THE F!&@ ARE YOU??? AND HOW COULD YOU BE THAT FAT BUT CAN JUMP THAT HIGH AND CROSS OVER ME???`,
+    text: `WHAT THE F!#@ ??? WHO THE F!&@ ARE YOU??? AND HOW CAN SOMEONE SO MASSIVE JUMP OVER ME SO QUICKLY???`,
     options: [
       {
         text: `Continue`,
@@ -1268,7 +1268,7 @@ const textNodes = [
   },
   {
     id: 85,
-    text: `???: "Are you the one who irrupt my dream?"`,
+    text: `???: "Are you the one who interrupt my dream?"`,
     options: [
       {
         text: `Yes`,
@@ -1300,10 +1300,10 @@ const textNodes = [
   },
   {
     id: 87,
-    text: `I am Hulk Goblin, I am the strongest Goblin in the world, I would punch everyone who irrupt my dream!`,
+    text: `I am Hulk Goblin, I am the strongest Goblin in the world, I will punch everyone who interrupt my dream!`,
     options: [
       {
-        text: `Ehhh, I'm sorry, could you not punch my face if you really going to punch me?`,
+        text: `Uhhhh, I'm sorry, but could you not punch my face to hard then?`,
         nextText: 89,
         funcRun: `pass`
       },
@@ -1316,7 +1316,7 @@ const textNodes = [
   },
   {
     id: 88,
-    text: `Not me! Is Him, you point where Archibald are.`,
+    text: `Wasn't me! It was him! You point at Archie`,
     options: [
       {
         text: `Continue`,
@@ -1327,7 +1327,7 @@ const textNodes = [
   },
   {
     id: 89,
-    text: `When you just finished your sentence, a big fist fly infront of your face, a huge punch sound surround this area. Your vision slowly turned off.`,
+    text: `Right as you finish your sentence, a massive fist is sent hurling towards your head. The loud crash is heard by goblins around the world. Your vision slowly fades to black.`,
     options: [
       {
         text: `Continue`,
@@ -1338,7 +1338,7 @@ const textNodes = [
   },
   {
     id: 90,
-    text: `Hulk Goblin "Who are you?"`,
+    text: `Hulk Goblin: "Who are you?"`,
     options: [
       {
         text: `I am your friendly neighborhood Spider gob!`,
@@ -1346,7 +1346,7 @@ const textNodes = [
         funcRun: `pass`
       },
       {
-        text: `I am the goblin who interest are become a hero.`,
+        text: `I am going to be the King of the Gamblers someday.`,
         nextText: 92,
         funcRun: `pass`
       },
@@ -1359,7 +1359,7 @@ const textNodes = [
   },
   {
     id: 91,
-    text: `Hulk Goblin stare at Archibald, than shouted"MOM!"`,
+    text: `Hulk Goblin stares at Archie, then shouts "MOM!?"`,
     options: [
       {
         text: `??????`,
@@ -1370,10 +1370,10 @@ const textNodes = [
   },
   {
     id: 92,
-    text: `Archibald & Hulk Goblin "OK, than?"`,
+    text: `Archie & Hulk Goblin "OK, and?"`,
     options: [
       {
-        text: `So, could you leave me alone?`,
+        text: `So, could you please leave me alone?`,
         nextText: 89,
         funcRun: `pass`
       }
@@ -1381,7 +1381,7 @@ const textNodes = [
   },
   {
     id: 93,
-    text: `Archibald & Hulk Goblin "??????"`,
+    text: `Archie & Hulk Goblin "??????"`,
     options: [
       {
         text: `:D`,
@@ -1397,7 +1397,7 @@ const textNodes = [
   },
   {
     id: 94,
-    text: `You look at Archibald, inside of your mind, it is ridiculous to believe that Archibald is female goblin!!!`,
+    text: `You stare at Archie in disbelief. This whole time she was a woman?!`,
     options: [
       {
         text: `!!!`,
@@ -1408,7 +1408,7 @@ const textNodes = [
   },
   {
     id: 95,
-    text: `You smile at both of them, they smile back to you.`,
+    text: `You smile at the both of them, they smile back to you.`,
     options: [
       {
         text: `Continue`,
@@ -1430,7 +1430,7 @@ const textNodes = [
   },
   {
     id: 97,
-    text: `You incredibly look at Archibald, ridiculously say out "You are female!" Archibald shouted back"Of Course! NOT!! "`,
+    text: `You stare at Archie, and call out, "I'm so sorry ma'am, is this your son?" Archie shouts back, "It's SIR to you!"`,
     options: [
       {
         text: `Continue`,
@@ -1441,7 +1441,7 @@ const textNodes = [
   },
   {
     id: 98,
-    text: `You see a big fist fly infront of your face, a huge punch sound surround this area. Your vision slowly turned off.`,
+    text: `You see a big fist fly towards your face, a huge punch sound is heard for miles. Your vision slowly fades to black.`,
     options: [
       {
         text: `Continue`,
@@ -1452,7 +1452,7 @@ const textNodes = [
   },
   {
     id: 99,
-    text: `As you finished your sentence, you see a big fist fly infront of your face, a huge sound surround this area. Your vision slowly turned off.`,
+    text: `Right as you finish your sentence, a massive fist is sent hurling towards your head. The loud crash is heard by goblins around the world. Your vision slowly fades to black.`,
     options: [
       {
         text: `Continue`,
@@ -1474,7 +1474,7 @@ const textNodes = [
   },
   {
     id: 101,
-    text: `Archibald"I only adopted him 2 years long. Also, I think it's IQ was pretty lower than average IQ."`,
+    text: `Archie: "I only adopted him 2 years ago. And I think his IQ was even less than that."`,
     options: [
       {
         text: `Oh↗`,
